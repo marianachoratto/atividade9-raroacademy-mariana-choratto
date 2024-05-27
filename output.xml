@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-05-27T12:40:11.968721" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-05-27T17:01:48.312237" rpa="false" schemaversion="5">
 <suite id="s1" name="testesMenuPrincipal" source="d:\Users\Mariana Choratto\Documents\Mariana\Programação\Raro\Exercicios pontuados\atividade9-raroacademy-mariana-choratto\atividade9-raroacademy-mariana-choratto\features\testesMenuPrincipal.robot">
-<test id="s1-t1" name="T8- O usuário não deve conseguir digitar mais de 14 números na tela" line="46">
+<test id="s1-t1" name="T11- O usuário deve conseguir interagir com a sessão de recarga de celular" line="62">
 <kw name="Abrir App" owner="config" type="SETUP">
 <kw name="Open Application" owner="AppiumLibrary">
 <arg>http://127.0.0.1:4723</arg>
@@ -16,112 +16,79 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="PASS" start="2024-05-27T12:40:12.375731" elapsed="4.988195"/>
+<status status="PASS" start="2024-05-27T17:01:48.740092" elapsed="6.193293"/>
 </kw>
-<status status="PASS" start="2024-05-27T12:40:12.374737" elapsed="4.990186"/>
+<status status="PASS" start="2024-05-27T17:01:48.738093" elapsed="6.196289"/>
 </kw>
 <kw name="Dado que acessei o aplicativo Nubank Clone" owner="testesMenuPrincipal">
 <kw name="Apertar botão de incompatibilidade de versões Android" owner="testesMenuPrincipal">
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-05-27T12:40:18.420504" level="INFO">xpath criteria: //android.widget.Button[@resource-id="android:id/button1"]</msg>
+<msg time="2024-05-27T17:01:56.074138" level="INFO">xpath criteria: //android.widget.Button[@resource-id="android:id/button1"]</msg>
 <arg>${COMPATIBILIDADE_ANDROID}</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-05-27T12:40:17.367915" elapsed="1.061566"/>
+<status status="PASS" start="2024-05-27T17:01:54.978263" elapsed="1.098868"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-05-27T12:40:18.445436" level="INFO">Clicking element 'xpath=//android.widget.Button[@resource-id="android:id/button1"]'.</msg>
-<msg time="2024-05-27T12:40:18.632214" level="INFO">xpath criteria: //android.widget.Button[@resource-id="android:id/button1"]</msg>
+<msg time="2024-05-27T17:01:56.083116" level="INFO">Clicking element 'xpath=//android.widget.Button[@resource-id="android:id/button1"]'.</msg>
+<msg time="2024-05-27T17:01:56.796553" level="INFO">xpath criteria: //android.widget.Button[@resource-id="android:id/button1"]</msg>
 <arg>${COMPATIBILIDADE_ANDROID}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-05-27T12:40:18.430476" elapsed="0.201738"/>
+<status status="PASS" start="2024-05-27T17:01:56.077131" elapsed="0.721416"/>
 </kw>
-<status status="PASS" start="2024-05-27T12:40:17.367915" elapsed="1.265297"/>
+<status status="PASS" start="2024-05-27T17:01:54.978263" elapsed="1.822278"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-05-27T12:40:19.313325" level="INFO">xpath criteria: //android.view.View [@content-desc="Olá, Breno Freitas"]</msg>
+<msg time="2024-05-27T17:01:56.999968" level="INFO">xpath criteria: //android.view.View [@content-desc="Olá, Breno Freitas"]</msg>
 <arg>${SAUDACAO_USUARIO}</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-05-27T12:40:18.634209" elapsed="0.681110"/>
+<status status="PASS" start="2024-05-27T17:01:56.802538" elapsed="0.198430"/>
 </kw>
-<status status="PASS" start="2024-05-27T12:40:17.366919" elapsed="1.949405"/>
+<status status="PASS" start="2024-05-27T17:01:54.976268" elapsed="2.026696"/>
 </kw>
-<kw name="Quando aperto o botão transferir" owner="carrosselDeBotoes">
+<kw name="Quando aperto o botão Recarga de celular" owner="carrosselDeBotoes">
+<kw name="Swipe By Percent" owner="AppiumLibrary">
+<arg>50</arg>
+<arg>50</arg>
+<arg>5</arg>
+<arg>50</arg>
+<doc>Swipe from one percent of the screen to another percent, for an optional duration.
+Normal swipe fails to scale for different screen resolutions, this can be avoided using percent.</doc>
+<status status="PASS" start="2024-05-27T17:01:57.008946" elapsed="1.403239"/>
+</kw>
 <kw name="Espera o elemento para clicar" owner="arguments">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2024-05-27T12:40:19.506352" level="INFO">xpath criteria: //android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[3]</msg>
+<msg time="2024-05-27T17:01:59.035700" level="INFO">xpath criteria: //android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[2]</msg>
 <arg>${elemento}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2024-05-27T12:40:19.326290" elapsed="0.182045"/>
+<status status="PASS" start="2024-05-27T17:01:58.416175" elapsed="0.621519"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-05-27T12:40:19.516314" level="INFO">Clicking element 'xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[3]'.</msg>
-<msg time="2024-05-27T12:40:20.679851" level="INFO">xpath criteria: //android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[3]</msg>
+<msg time="2024-05-27T17:01:59.043723" level="INFO">Clicking element 'xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[2]'.</msg>
+<msg time="2024-05-27T17:02:00.223650" level="INFO">xpath criteria: //android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[2]</msg>
 <arg>${elemento}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-05-27T12:40:19.509332" elapsed="1.171517"/>
+<status status="PASS" start="2024-05-27T17:01:59.037694" elapsed="1.186948"/>
 </kw>
-<arg>${BOTAO_TRANSFERIR}</arg>
-<status status="PASS" start="2024-05-27T12:40:19.321305" elapsed="1.360544"/>
+<arg>${BOTÃO_RECARGA_CEL}</arg>
+<status status="PASS" start="2024-05-27T17:01:58.413182" elapsed="1.812455"/>
 </kw>
-<status status="PASS" start="2024-05-27T12:40:19.319310" elapsed="1.363540"/>
-</kw>
-<kw name="Quando digito mais que 14 numeros" owner="carrosselDeBotoes">
-<kw name="Espera o elemento para fazer o inputtext" owner="arguments">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2024-05-27T12:40:20.861463" level="INFO">xpath criteria: //android.widget.EditText</msg>
-<arg>${elemento}</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2024-05-27T12:40:20.695807" elapsed="0.166629"/>
-</kw>
-<kw name="Input Text" owner="AppiumLibrary">
-<msg time="2024-05-27T12:40:20.868416" level="INFO">Typing text '"111222333444555"' into text field 'xpath=//android.widget.EditText'</msg>
-<msg time="2024-05-27T12:40:21.036002" level="INFO">xpath criteria: //android.widget.EditText</msg>
-<arg>${elemento}</arg>
-<arg>${texto}</arg>
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2024-05-27T12:40:20.862436" elapsed="0.173566"/>
-</kw>
-<arg>${INPUT_TRANSFERENCIA}</arg>
-<arg>"111222333444555"</arg>
-<status status="PASS" start="2024-05-27T12:40:20.689826" elapsed="0.347174"/>
-</kw>
-<status status="PASS" start="2024-05-27T12:40:20.685836" elapsed="0.351164"/>
-</kw>
-<kw name="Então à tela volta à 0" owner="carrosselDeBotoes">
-<kw name="Get Element Attribute" owner="AppiumLibrary">
-<msg time="2024-05-27T12:40:21.040991" level="WARN">Keyword 'Get Element Attribute' found both from a custom library 'AppiumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'AppiumLibrary.Get Element Attribute' or 'XML.Get Element Attribute'.</msg>
-<msg time="2024-05-27T12:40:21.681322" level="INFO">Element 'xpath=//android.widget.EditText' attribute 'text' value 'R$ 0,00' </msg>
-<msg time="2024-05-27T12:40:21.681322" level="INFO">xpath criteria: //android.widget.EditText</msg>
-<msg time="2024-05-27T12:40:21.681322" level="INFO">${texto} = R$ 0,00</msg>
-<var>${texto}</var>
-<arg>${INPUT_TRANSFERENCIA}</arg>
-<arg>text</arg>
-<doc>Get element attribute using given attribute: name, value,...</doc>
-<status status="PASS" start="2024-05-27T12:40:21.040991" elapsed="0.640331"/>
-</kw>
-<kw name="Should Contain" owner="BuiltIn">
-<arg>${texto}</arg>
-<arg>R$ 0,00</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2024-05-27T12:40:21.681322" elapsed="0.000998"/>
-</kw>
-<status status="PASS" start="2024-05-27T12:40:21.039993" elapsed="0.642327"/>
+<status status="PASS" start="2024-05-27T17:01:57.006951" elapsed="3.220680"/>
 </kw>
 <kw name="Teardown" owner="config" type="TEARDOWN">
 <kw name="Run Keyword If Test Failed" owner="BuiltIn">
 <arg>Capture Page Screenshot</arg>
 <doc>Runs the given keyword with the given arguments, if the test failed.</doc>
-<status status="PASS" start="2024-05-27T12:40:21.686312" elapsed="0.000000"/>
+<status status="PASS" start="2024-05-27T17:02:00.234618" elapsed="0.001992"/>
 </kw>
 <kw name="Close All Applications" owner="AppiumLibrary">
 <doc>Closes all open applications.</doc>
-<status status="PASS" start="2024-05-27T12:40:21.687309" elapsed="0.430266"/>
+<status status="PASS" start="2024-05-27T17:02:00.238604" elapsed="0.395511"/>
 </kw>
-<status status="PASS" start="2024-05-27T12:40:21.685314" elapsed="0.434247"/>
+<status status="PASS" start="2024-05-27T17:02:00.231622" elapsed="0.403488"/>
 </kw>
-<status status="PASS" start="2024-05-27T12:40:12.373731" elapsed="9.755801"/>
+<status status="PASS" start="2024-05-27T17:01:48.737096" elapsed="11.903020"/>
 </test>
-<status status="PASS" start="2024-05-27T12:40:11.977695" elapsed="10.156826"/>
+<status status="PASS" start="2024-05-27T17:01:48.320210" elapsed="12.404657"/>
 </suite>
 <statistics>
 <total>
@@ -134,6 +101,5 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 </suite>
 </statistics>
 <errors>
-<msg time="2024-05-27T12:40:21.040991" level="WARN">Keyword 'Get Element Attribute' found both from a custom library 'AppiumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'AppiumLibrary.Get Element Attribute' or 'XML.Get Element Attribute'.</msg>
 </errors>
 </robot>

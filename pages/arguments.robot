@@ -13,6 +13,12 @@ Espera o elemento para fazer o inputtext
     Wait Until Element Is Visible    ${elemento}
     Input Text                       ${elemento}    ${texto}
 
+Pega o atributo do elemento e verifica se tem o texto esperado
+    [Arguments]    ${elemento}    ${item}
+    Wait Until Page Contains Element    ${elemento}
+    ${variavel}=    Get Element Attribute    ${elemento}    text
+    Should Contain    ${variavel}    ${item}
+
 # Checa se o elemento está presente na página
 #     [Arguments]    ${elemento1}    ${elemento2}=""    ${elemento3}=""    ${elemento4}=""    ${elemento5}=""
 

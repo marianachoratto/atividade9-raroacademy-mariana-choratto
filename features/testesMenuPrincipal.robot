@@ -48,3 +48,18 @@ T8- O usuário não deve conseguir digitar mais de 14 números na tela
     Quando aperto o botão transferir
     Quando digito mais que 14 numeros
     Então à tela volta à 0
+
+T09- O usuário deve conseguir interagir com a seção de depositar
+    Dado que acessei o aplicativo Nubank Clone
+    Quando aperto o botão depositar
+    Então posso usar os recursos da seção de depósito
+
+T10- O usuário deve conseguir interagir com a sessão de Empréstimo
+    Dado que acessei o aplicativo Nubank Clone
+    Quando aperto o botão Empréstimos
+    Então posso usar os recursos da seção de empréstimos
+
+T11- O usuário deve conseguir interagir com a sessão de recarga de celular
+    Dado que acessei o aplicativo Nubank Clone
+    Quando aperto o botão Recarga de celular
+    Então posso digitar o numero do meu celular para recarga
