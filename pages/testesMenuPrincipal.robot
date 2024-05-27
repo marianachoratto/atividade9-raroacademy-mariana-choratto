@@ -28,7 +28,7 @@ Dado que acessei o aplicativo Nubank Clone
     Apertar botão de incompatibilidade de versões Android
     Wait Until Page Contains Element    ${SAUDACAO_USUARIO}
 
-Então tenho acesso à algumas informações pesssoais
+Então tenho acesso à várias funcionalidades e informações pesssoais
     Page Should Contain Element    ${SAUDACAO_USUARIO}
     Page Should Contain Element    ${SALDO_CONTA}
     Page Should Contain Element    ${CARROSSEL_BOTOES}

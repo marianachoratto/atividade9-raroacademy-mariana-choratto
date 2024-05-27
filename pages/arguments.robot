@@ -14,12 +14,12 @@ Espera o elemento para fazer o inputtext
     Input Text                       ${elemento}    ${texto}
 
 # Checa se o elemento está presente na página
-#     [Arguments]    ${elemento1}    ${elemento2}="oi"    ${elemento3}="oi"    ${elemento4}="oi"    ${elemento5}="oi"
+#     [Arguments]    ${elemento1}    ${elemento2}=""    ${elemento3}=""    ${elemento4}=""    ${elemento5}=""
 
 #     @{ELEMENTOS}=    ${elemento1}    ${elemento2}    ${elemento3}    ${elemento4}    ${elemento5}
 
 #     FOR    ${elemento}    IN    @{ELEMENTOS}
-#         IF    "${elemento}" != "oi"
+#         IF    "${elemento}" != $EMPTY
 #             Page Should Contain Element    ${elemento}
 #         END
 #     END

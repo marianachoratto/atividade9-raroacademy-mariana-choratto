@@ -1,5 +1,6 @@
 *** Settings ***
 Library    AppiumLibrary
+Library    XML
 Resource    ../base.robot
 
 *** Variables ***
@@ -25,8 +26,11 @@ ${FUNC_PAGAR_COM_PIX}    xpath=${PREFIXO} [@content-desc="Pagar com Pix\nLeia um
 ${FUNC_PAGAR_FATURA_CARTÕES}    xpath=${PREFIXO} [@content-desc="Pagar fatura do cartão\nLibera o limite do seu Cartão de Crédito."]
 ${FUNC_PAGAR_BOLETO}    xpath=${PREFIXO} [@content-desc="Pagar um boleto\nContas de luz, água, etc."]
 
+# Página de Transferência
+${INPUT_TRANSFERENCIA}    xpath=//android.widget.EditText
+
 *** Keywords ***
-Quando aperto o botão pix
+Quando aperto o botão Pix
     Espera o elemento para clicar    ${BOTAO_PIX}
 
 Então tenho acesso às suas funcionalidades
@@ -39,7 +43,7 @@ Então tenho acesso às suas funcionalidades
     Element Should Be Enabled   ${LIMITE_PIX} 
     Element Should Be Enabled   ${ME_AJUDA}
 
-Quando aperto o botão pagar
+Quando aperto o botão Pagar
     Espera o elemento para clicar    ${BOTÃO_PAGAR_BOLETOS}
 
 Então consigo visualizar suas funcionalidades
@@ -51,3 +55,40 @@ Então consigo visualizar suas funcionalidades
 
 Quando aperto o botão transferir
     Espera o elemento para clicar    ${BOTAO_TRANSFERIR}
+
+Então consigo vizualizar a página
+    Wait Until Page Contains Element    ${INPUT_TRANSFERENCIA} 
+    ${hint}=    Get Element Attribute    ${INPUT_TRANSFERENCIA}    hint
+    Should Contain    ${hint}    Qual é o valor da transferência?\nSaldo disponível em conta R$ 181,79
+
+E fazer uma transferência
+    Espera o elemento para fazer o inputtext    ${INPUT_TRANSFERENCIA}    "15,00"
+
+Quando digito letras ao invés dos números
+    Espera o elemento para fazer o inputtext    ${INPUT_TRANSFERENCIA}    "abcd"
+    
+Então as letras não aparecerão na tela
+    ${texto}    Get Element Attribute    ${INPUT_TRANSFERENCIA}    text
+    Should Not Contain    ${texto}    R$ abcd
+
+Quando digito letras e números
+    Espera o elemento para fazer o inputtext    ${INPUT_TRANSFERENCIA}    "abc789"
+
+Então apenas os números aparecem
+    # Wait Until Page Contains    7,89
+    ${texto}    Get Element Attribute    ${INPUT_TRANSFERENCIA}    text
+    Should Contain    ${texto}    R$ 7,89
+
+Quando digito 14 numeros
+    Espera o elemento para fazer o inputtext    ${INPUT_TRANSFERENCIA}    "11122233344455"
+
+Então aparecem 14 números na tela do celular
+    ${texto}    Get Element Attribute    ${INPUT_TRANSFERENCIA}    text
+    Should Contain    ${texto}    R$ 111.222.333.444,55
+
+Quando digito mais que 14 numeros
+    Espera o elemento para fazer o inputtext    ${INPUT_TRANSFERENCIA}    "111222333444555"
+
+Então à tela volta à 0
+    ${texto}    Get Element Attribute    ${INPUT_TRANSFERENCIA}    text
+    Should Contain    ${texto}    R$ 0,00
