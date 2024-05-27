@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-05-26T23:28:28.553391" rpa="false" schemaversion="5">
+<suite id="s1" name="testesMenuPrincipal" source="d:\Users\Mariana Choratto\Documents\Mariana\Programação\Raro\Exercicios pontuados\atividade9-raroacademy-mariana-choratto\atividade9-raroacademy-mariana-choratto\features\testesMenuPrincipal.robot">
+<test id="s1-t1" name="T3- O Usuario deve conseguir interagir com a seção de pagar boletos" line="17">
+<kw name="Abrir App" owner="config" type="SETUP">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>http://127.0.0.1:4723</arg>
+<arg>automationName=${ANDROID_AUTOMATION_NAME}</arg>
+<arg>platformName=${ANDROID_PLATFORM_NAME}</arg>
+<arg>AppiumUdid=${APPIUM:UDID}</arg>
+<arg>app=${APPIUM:APP}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-05-26T23:28:29.157431" elapsed="5.516243"/>
+</kw>
+<status status="PASS" start="2024-05-26T23:28:29.156434" elapsed="5.517240"/>
+</kw>
+<kw name="Dado que acessei o aplicativo Nubank Clone" owner="testesMenuPrincipal">
+<kw name="Apertar botão de incompatibilidade de versões Android" owner="testesMenuPrincipal">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-05-26T23:28:35.729505" level="INFO">xpath criteria: //android.widget.Button[@resource-id="android:id/button1"]</msg>
+<arg>${COMPATIBILIDADE_ANDROID}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-05-26T23:28:34.677665" elapsed="1.054804"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-26T23:28:35.736457" level="INFO">Clicking element 'xpath=//android.widget.Button[@resource-id="android:id/button1"]'.</msg>
+<msg time="2024-05-26T23:28:36.449639" level="INFO">xpath criteria: //android.widget.Button[@resource-id="android:id/button1"]</msg>
+<arg>${COMPATIBILIDADE_ANDROID}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-26T23:28:35.732469" elapsed="0.717170"/>
+</kw>
+<status status="PASS" start="2024-05-26T23:28:34.676667" elapsed="1.772972"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-05-26T23:28:36.637138" level="INFO">xpath criteria: //android.view.View [@content-desc="Olá, Breno Freitas"]</msg>
+<arg>${SAUDACAO_USUARIO}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-05-26T23:28:36.450636" elapsed="0.186502"/>
+</kw>
+<status status="PASS" start="2024-05-26T23:28:34.676667" elapsed="1.960471"/>
+</kw>
+<kw name="Quando aperto o botão pagar" owner="carrosselDeBotoes">
+<kw name="Espera o elemento para clicar" owner="arguments">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-26T23:28:36.817654" level="INFO">xpath criteria: //android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[2]</msg>
+<arg>${elemento}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-26T23:28:36.640130" elapsed="0.178522"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-26T23:28:36.822640" level="INFO">Clicking element 'xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[2]'.</msg>
+<msg time="2024-05-26T23:28:37.802872" level="INFO">xpath criteria: //android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[2]</msg>
+<arg>${elemento}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-26T23:28:36.819649" elapsed="0.984219"/>
+</kw>
+<arg>${BOTÃO_PAGAR_BOLETOS}</arg>
+<status status="PASS" start="2024-05-26T23:28:36.639132" elapsed="1.164736"/>
+</kw>
+<status status="PASS" start="2024-05-26T23:28:36.638133" elapsed="1.165735"/>
+</kw>
+<kw name="Então consigo visualizar suas funcionalidades" owner="carrosselDeBotoes">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-05-26T23:28:37.927546" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View</msg>
+<arg>${PAGINA_PAGAR_BOLETOS}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-05-26T23:28:37.805863" elapsed="0.123671"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="AppiumLibrary">
+<msg time="2024-05-26T23:28:38.046220" level="INFO">Element 'xpath=//android.view.View [@content-desc="Pagar com Pix
+Leia um QR Code ou cole o código."]' is enabled .</msg>
+<msg time="2024-05-26T23:28:38.046220" level="INFO">xpath criteria: //android.view.View [@content-desc="Pagar com Pix
+Leia um QR Code ou cole o código."]</msg>
+<arg>${FUNC_PAGAR_COM_PIX}</arg>
+<doc>Verifies that element identified with locator is enabled.</doc>
+<status status="PASS" start="2024-05-26T23:28:37.929534" elapsed="0.117684"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="AppiumLibrary">
+<msg time="2024-05-26T23:28:38.217761" level="INFO">Element 'xpath=//android.view.View [@content-desc="Pagar fatura do cartão
+Libera o limite do seu Cartão de Crédito."]' is enabled .</msg>
+<msg time="2024-05-26T23:28:38.217761" level="INFO">xpath criteria: //android.view.View [@content-desc="Pagar fatura do cartão
+Libera o limite do seu Cartão de Crédito."]</msg>
+<arg>${FUNC_PAGAR_FATURA_CARTÕES}</arg>
+<doc>Verifies that element identified with locator is enabled.</doc>
+<status status="PASS" start="2024-05-26T23:28:38.047218" elapsed="0.170543"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="AppiumLibrary">
+<msg time="2024-05-26T23:28:38.351924" level="INFO">Element 'xpath=//android.view.View [@content-desc="Pagar um boleto
+Contas de luz, água, etc."]' is enabled .</msg>
+<msg time="2024-05-26T23:28:38.351924" level="INFO">xpath criteria: //android.view.View [@content-desc="Pagar um boleto
+Contas de luz, água, etc."]</msg>
+<arg>${FUNC_PAGAR_BOLETO}</arg>
+<doc>Verifies that element identified with locator is enabled.</doc>
+<status status="PASS" start="2024-05-26T23:28:38.218758" elapsed="0.133166"/>
+</kw>
+<status status="PASS" start="2024-05-26T23:28:37.804865" elapsed="0.548058"/>
+</kw>
+<kw name="Teardown" owner="config" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2024-05-26T23:28:38.354917" elapsed="0.000000"/>
+</kw>
+<kw name="Close All Applications" owner="AppiumLibrary">
+<doc>Closes all open applications.</doc>
+<status status="PASS" start="2024-05-26T23:28:38.354917" elapsed="0.314160"/>
+</kw>
+<status status="PASS" start="2024-05-26T23:28:38.353919" elapsed="0.315158"/>
+</kw>
+<status status="PASS" start="2024-05-26T23:28:29.154439" elapsed="9.516631"/>
+</test>
+<status status="PASS" start="2024-05-26T23:28:28.569349" elapsed="10.106711"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="testesMenuPrincipal">testesMenuPrincipal</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
