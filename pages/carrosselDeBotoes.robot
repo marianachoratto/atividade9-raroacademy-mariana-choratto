@@ -113,6 +113,7 @@ Quando aperto o botão depositar
 
 
 Então posso usar os recursos da seção de depósito
+   Wait Until Element Is Visible    ${DEPOSITO_PIX}
    Page Should Contain Text    Como você quer depositar na sua conta do Nubank
    Element Should Be Enabled    ${DEPOSITO_PIX}
    Page Should Contain Text    Pix&#10;Sem custo e cai na hora, mesmo de madrugada e fim de semana.

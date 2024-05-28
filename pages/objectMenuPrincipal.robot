@@ -10,6 +10,7 @@ ${COMPATIBILIDADE_ANDROID}    xpath=//android.widget.Button[@resource-id="androi
 ${SAUDACAO_USUARIO}    xpath=${PREFIXO} [@content-desc="Olá, Breno Freitas"]
 ${ÍCONE_OLHO}    xpath=//android.widget.ScrollView/android.widget.Button[1]
 ${ÍCONE_AJUDA}    xpath=//android.widget.ScrollView/android.widget.Button[2]
+${ÍCONE_INDICAR_AMIGOS}    xpath=//android.widget.ScrollView/android.widget.Button[3]
 
 
 ${CARROSSEL_BOTOES}    xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]
@@ -26,6 +27,24 @@ ${BOTÃO_MEUS CARTÕES}    xpath=//android.view.View[@content-desc="Meus cartõe
 ${BOTÃO_EMPRESTIMO_10_MIL}    xpath=//android.view.View[@content-desc="Você tem R$ 10.000,00 disponíveis para empréstimo."]
 ${BOTÃO_PLANOS_FUTUROS}    xpath=//android.view.View[@content-desc="Conquiste planos futuros: conheça as opções para guardar dinheiro."]
 
+# Página Conta
+${PAGINA_CONTA}    xpath=//android.widget.ScrollView
+${SALDO_DISPONÍVEL}    xpath=//android.view.View[@content-desc="Saldo disponível"]
+${SALDO_DISPONÍVEL_181}    xpath=//android.view.View[@content-desc="R$ 181,79"]
+${DINHEIRO_GAURDADO}    xpath=//android.view.View[@content-desc="Dinheiro guardado\nR$ 240,02"]
+${RENDIMENTO_CONTA}    xpath=//android.view.View[@content-desc="Rendimento total da conta\n+R$ 0,20 este mês"]
+    # Histórico da conta
+${HISTÓRICO_1}    xpath=//android.view.View[@content-desc="Transferência enviada\nOntem\nPATRICIA COSTA \nR$ 30,00\nPix"]
+${HISTÓRICO_2}    xpath=//android.view.View[@content-desc="Transferência recebida\nOntem\nANDRE JEY\nR$ 30,00\nPix"]
+${HISTÓRICO_3}    xpath=//android.view.View[@content-desc="Transferência recebida\nOntem\nERIKO BARBOSA\nR$ 30,00\nPix"]
+${HISTÓRICO_4}    xpath=//android.view.View[@content-desc="Transferência recebida\nOntem\nIVAN COELHO \nR$ 30,00\nPix"]
+    # Botões da conta
+${BOTÃO_DEPOSITAR_CONTA}    xpath=//android.widget.HorizontalScrollView/android.widget.Button[1]
+${BOTÃO_PAGAR_BOLETOS_CONTA}    xpath=//android.widget.HorizontalScrollView/android.widget.Button[2]
+${BOTÃO_TRANSFERIR_CONTA}    xpath=//android.widget.HorizontalScrollView/android.widget.Button[3]
+${BOTÃO_EMPRESTIMO_CONTA}    xpath=//android.widget.HorizontalScrollView/android.widget.Button[4]
+
+
 # Página de empréstimo de 10 mil
 ${PAGINA_EMPRESTIMO}    //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[2]
 ${LINK_ENTENDA_COMO_FUNCIONA}    xpath=//android.view.View[@content-desc="Entenda como funciona >"]
@@ -37,6 +56,12 @@ ${BOTÃO_PAGAR_FATURA}    xpath=//android.view.View[@content-desc="Pagar fatura"
 ${BOTÃO_RESUMO_FATURAS}    xpath=//android.view.View[@content-desc="Resumo de faturas"]
 ${BOTÃO_AJUSTAR_LIMITES}    xpath=//android.view.View[@content-desc="Ajustar limites"]
 ${BOTÃO_CARTÃO_VIRTUAL}    xpath=//android.view.View[@content-desc="Cartão virtual"]
+${BOTÃO_BLOQUEAR_CARTÃO}    xpath=//android.view.View[@content-desc="Bloquear cartão"]
+${BOTÃO_AMIGOS_CRÉDITO}    xpath=//android.view.View[@content-desc="Indicar amigos"]
+    # Faturas cartão de crédito
+${FATURA_1}    xpath=//android.view.View[@content-desc="Pagamento recebido\nOntem\nVOCÊ PAGOU R$ 50,00\nR$ 30,00\nPix"]
+${FATURA_2}    xpath=//android.view.View[@content-desc="Supermercado\nOntem\nBRENO FREITAS\nR$ 30,00\nPix"]
+${FATURA_3}    xpath=//android.view.View[@content-desc="Transferência enviada\nOntem\nBRENO FREITAS\nR$ 30,00\nPix"]
 
 # Página de Investimentos
 ${PÁGINA_INVESTIMENTOS}    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View
@@ -75,6 +100,26 @@ Quando clico no botão meus cartões
 Então consigo ver que ele está ligado
     Element Should Be Enabled    ${BOTÃO_MEUS CARTÕES}
 
+Quando clico no botão Conta
+    Espera o elemento para clicar    ${SALDO_CONTA}
+
+Então tenho acesso às informações da minha conta
+    Wait Until Element Is Visible    ${PAGINA_CONTA}
+    Checa se o elemento está visível    ${SALDO_DISPONÍVEL}    ${SALDO_DISPONÍVEL_181}    ${DINHEIRO_GAURDADO}    ${RENDIMENTO_CONTA}
+
+Então tenho acesso ao histórico de pagamento
+    Wait Until Element Is Visible    ${PAGINA_CONTA}
+    Swipe By Percent    50    75    50    3
+    Wait Until Element Is Visible    ${HISTÓRICO_4}
+    Pega o atributo do elemento e verifica se tem o texto esperado 2    ${HISTÓRICO_1}    Transferência enviada\nOntem\nPATRICIA COSTA \nR$ 30,00\nPix    content-desc
+    Pega o atributo do elemento e verifica se tem o texto esperado 2    ${HISTÓRICO_2}    Transferência recebida\nOntem\nANDRE JEY\nR$ 30,00\nPix    content-desc
+    Pega o atributo do elemento e verifica se tem o texto esperado 2    ${HISTÓRICO_3}    Transferência recebida\nOntem\nERIKO BARBOSA\nR$ 30,00\nPix    content-desc
+    Pega o atributo do elemento e verifica se tem o texto esperado 2    ${HISTÓRICO_4}    Transferência recebida\nOntem\nIVAN COELHO \nR$ 30,00\nPix    content-desc
+
+E depois no botão depositar
+    Espera o elemento para clicar    ${BOTÃO_DEPOSITAR_CONTA}
+
+
 Então consigo clicar no botão "Conquiste planos futuros"
     Espera o elemento para clicar e checa se está habilitado    ${BOTÃO_PLANOS_FUTUROS}
 
@@ -89,7 +134,20 @@ Então posso interargir com os recursos da sessão
     Page Should Contain Text    Fatura atual
     Page Should Contain Text    R$ 780,72
     Page Should Contain Text    Limite disponível R$ 806,78
-    Checa se o elemento está presente na página    ${BOTÃO_PAGAR_FATURA}    ${BOTÃO_RESUMO_FATURAS}    ${BOTÃO_AJUSTAR_LIMITES}    ${BOTÃO_CARTÃO_VIRTUAL}    
+    Checa se o elemento está presente na página    ${BOTÃO_PAGAR_FATURA}    ${BOTÃO_RESUMO_FATURAS}    ${BOTÃO_AJUSTAR_LIMITES}    ${BOTÃO_CARTÃO_VIRTUAL}
+    Swipe By Percent    90    85    10    85
+    Checa se o elemento está presente na página    ${BOTÃO_BLOQUEAR_CARTÃO}    ${BOTÃO_AMIGOS_CRÉDITO}    
+
+
+Então posso ver informações sobre a fatura
+    Swipe By Percent    50    75    50    3
+    Wait Until Element Is Visible    ${FATURA_1}
+    Pega o atributo do elemento e verifica se tem o texto esperado 2    ${FATURA_1}   Pagamento recebido\nOntem\nVOCÊ PAGOU R$ 50,00\nR$ 30,00\nPix     content-desc
+    Pega o atributo do elemento e verifica se tem o texto esperado 2    ${FATURA_2}    Supermercado\nOntem\nBRENO FREITAS\nR$ 30,00\nPix    content-desc
+    Pega o atributo do elemento e verifica se tem o texto esperado 2    ${FATURA_3}    Transferência enviada\nOntem\nBRENO FREITAS\nR$ 30,00\nPix    content-desc
+
+
+
 
 Quando clico na sessão empréstimo
     Swipe By Percent    50    75    50    3
@@ -145,3 +203,6 @@ Quando clico no botão de ajuda
 
 Então ele estará habilitado
     Element Should Be Enabled    ${ÍCONE_AJUDA}
+
+Quando clico no botão de indicar amigos
+    Espera o elemento para clicar    ${ÍCONE_INDICAR_AMIGOS}

@@ -6,7 +6,7 @@ Library    AppiumLibrary
 Resource   utils/config.robot
 
 # Pages
-Resource    pages/testesMenuPrincipal.robot
+Resource    pages/objectMenuPrincipal.robot
 Resource    pages/arguments.robot
 
 

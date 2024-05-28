@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-05-28T14:30:40.824437" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-05-28T17:57:47.574394" rpa="false" schemaversion="5">
 <suite id="s1" name="testesMenuPrincipal" source="d:\Users\Mariana Choratto\Documents\Mariana\Programação\Raro\Exercicios pontuados\atividade9-raroacademy-mariana-choratto\atividade9-raroacademy-mariana-choratto\features\testesMenuPrincipal.robot">
-<test id="s1-t1" name="T32- O usuário deve poder clicar no botão de ajuda" line="186">
+<test id="s1-t1" name="T27- O usuário deve poder interagir com os botões da página de conta" line="151">
 <kw name="Abrir App" owner="config" type="SETUP">
 <kw name="Open Application" owner="AppiumLibrary">
 <arg>http://127.0.0.1:4723</arg>
@@ -16,80 +16,166 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="PASS" start="2024-05-28T14:30:41.342975" elapsed="6.014390"/>
+<status status="PASS" start="2024-05-28T17:57:48.051684" elapsed="5.882492"/>
 </kw>
-<status status="PASS" start="2024-05-28T14:30:41.341978" elapsed="6.016385"/>
+<status status="PASS" start="2024-05-28T17:57:48.050687" elapsed="5.884486"/>
 </kw>
 <kw name="Dado que acessei o aplicativo Nubank Clone" owner="testesMenuPrincipal">
 <kw name="Apertar botão de incompatibilidade de versões Android" owner="testesMenuPrincipal">
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-05-28T14:30:48.515809" level="INFO">xpath criteria: //android.widget.Button[@resource-id="android:id/button1"]</msg>
+<msg time="2024-05-28T17:57:55.134084" level="INFO">xpath criteria: //android.widget.Button[@resource-id="android:id/button1"]</msg>
 <arg>${COMPATIBILIDADE_ANDROID}</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-05-28T14:30:47.361650" elapsed="1.163939"/>
+<status status="PASS" start="2024-05-28T17:57:53.938166" elapsed="1.197911"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-05-28T14:30:48.546277" level="INFO">Clicking element 'xpath=//android.widget.Button[@resource-id="android:id/button1"]'.</msg>
-<msg time="2024-05-28T14:30:49.289644" level="INFO">xpath criteria: //android.widget.Button[@resource-id="android:id/button1"]</msg>
+<msg time="2024-05-28T17:57:55.140101" level="INFO">Clicking element 'xpath=//android.widget.Button[@resource-id="android:id/button1"]'.</msg>
+<msg time="2024-05-28T17:57:55.850958" level="INFO">xpath criteria: //android.widget.Button[@resource-id="android:id/button1"]</msg>
 <arg>${COMPATIBILIDADE_ANDROID}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-05-28T14:30:48.527115" elapsed="0.762529"/>
+<status status="PASS" start="2024-05-28T17:57:55.136077" elapsed="0.715879"/>
 </kw>
-<status status="PASS" start="2024-05-28T14:30:47.360628" elapsed="1.930015"/>
+<status status="PASS" start="2024-05-28T17:57:53.937168" elapsed="1.915784"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-05-28T14:30:49.536684" level="INFO">xpath criteria: //android.view.View [@content-desc="Olá, Breno Freitas"]</msg>
+<msg time="2024-05-28T17:57:56.032125" level="INFO">xpath criteria: //android.view.View [@content-desc="Olá, Breno Freitas"]</msg>
 <arg>${SAUDACAO_USUARIO}</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-05-28T14:30:49.290844" elapsed="0.246202"/>
+<status status="PASS" start="2024-05-28T17:57:55.854947" elapsed="0.178109"/>
 </kw>
-<status status="PASS" start="2024-05-28T14:30:47.359360" elapsed="2.177686"/>
+<status status="PASS" start="2024-05-28T17:57:53.936170" elapsed="2.098883"/>
 </kw>
-<kw name="Quando clico no botão de ajuda" owner="testesMenuPrincipal">
+<kw name="Quando clico no botão Conta" owner="testesMenuPrincipal">
 <kw name="Espera o elemento para clicar" owner="arguments">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2024-05-28T14:30:49.701400" level="INFO">xpath criteria: //android.widget.ScrollView/android.widget.Button[2]</msg>
+<msg time="2024-05-28T17:57:56.267603" level="INFO">xpath criteria: //android.view.View [contains(@content-desc, 'Conta')]</msg>
 <arg>${elemento}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2024-05-28T14:30:49.552826" elapsed="0.150568"/>
+<status status="PASS" start="2024-05-28T17:57:56.044037" elapsed="0.226560"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-05-28T14:30:49.708381" level="INFO">Clicking element 'xpath=//android.widget.ScrollView/android.widget.Button[2]'.</msg>
-<msg time="2024-05-28T14:30:50.395596" level="INFO">xpath criteria: //android.widget.ScrollView/android.widget.Button[2]</msg>
+<msg time="2024-05-28T17:57:56.286549" level="INFO">Clicking element 'xpath=//android.view.View [contains(@content-desc, 'Conta')]'.</msg>
+<msg time="2024-05-28T17:57:57.421419" level="INFO">xpath criteria: //android.view.View [contains(@content-desc, 'Conta')]</msg>
 <arg>${elemento}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-05-28T14:30:49.703394" elapsed="0.694199"/>
+<status status="PASS" start="2024-05-28T17:57:56.271594" elapsed="1.150821"/>
 </kw>
-<arg>${ÍCONE_AJUDA}</arg>
-<status status="PASS" start="2024-05-28T14:30:49.548838" elapsed="0.849752"/>
+<arg>${SALDO_CONTA}</arg>
+<status status="PASS" start="2024-05-28T17:57:56.040041" elapsed="1.383372"/>
 </kw>
-<status status="PASS" start="2024-05-28T14:30:49.544849" elapsed="0.854738"/>
+<status status="PASS" start="2024-05-28T17:57:56.038045" elapsed="1.386364"/>
 </kw>
-<kw name="Então ele estará habilitado" owner="testesMenuPrincipal">
+<kw name="E depois no botão depositar" owner="testesMenuPrincipal">
+<kw name="Espera o elemento para clicar" owner="arguments">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-28T17:57:57.635939" level="INFO">xpath criteria: //android.widget.HorizontalScrollView/android.widget.Button[1]</msg>
+<arg>${elemento}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-28T17:57:57.435380" elapsed="0.201564"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-28T17:57:57.656884" level="INFO">Clicking element 'xpath=//android.widget.HorizontalScrollView/android.widget.Button[1]'.</msg>
+<msg time="2024-05-28T17:57:58.599341" level="INFO">xpath criteria: //android.widget.HorizontalScrollView/android.widget.Button[1]</msg>
+<arg>${elemento}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-28T17:57:57.637934" elapsed="0.962404"/>
+</kw>
+<arg>${BOTÃO_DEPOSITAR_CONTA}</arg>
+<status status="PASS" start="2024-05-28T17:57:57.432389" elapsed="1.168949"/>
+</kw>
+<status status="PASS" start="2024-05-28T17:57:57.430395" elapsed="1.171942"/>
+</kw>
+<kw name="Então posso usar os recursos da seção de depósito" owner="carrosselDeBotoes">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-28T17:57:58.806191" level="INFO">xpath criteria: //android.view.View [@content-desc="Pix
+Sem custo e cai na hora, mesmo de madrugada e fim de semana."]</msg>
+<arg>${DEPOSITO_PIX}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-28T17:57:58.621280" elapsed="0.188901"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2024-05-28T17:57:58.946370" level="INFO">Current page contains text 'Como você quer depositar na sua conta do Nubank'.</msg>
+<arg>Como você quer depositar na sua conta do Nubank</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="PASS" start="2024-05-28T17:57:58.811178" elapsed="0.135192"/>
+</kw>
 <kw name="Element Should Be Enabled" owner="AppiumLibrary">
-<msg time="2024-05-28T14:30:50.640751" level="INFO">Element 'xpath=//android.widget.ScrollView/android.widget.Button[2]' is enabled .</msg>
-<msg time="2024-05-28T14:30:50.641749" level="INFO">xpath criteria: //android.widget.ScrollView/android.widget.Button[2]</msg>
-<arg>${ÍCONE_AJUDA}</arg>
+<msg time="2024-05-28T17:57:59.110386" level="INFO">Element 'xpath=//android.view.View [@content-desc="Pix
+Sem custo e cai na hora, mesmo de madrugada e fim de semana."]' is enabled .</msg>
+<msg time="2024-05-28T17:57:59.110386" level="INFO">xpath criteria: //android.view.View [@content-desc="Pix
+Sem custo e cai na hora, mesmo de madrugada e fim de semana."]</msg>
+<arg>${DEPOSITO_PIX}</arg>
 <doc>Verifies that element identified with locator is enabled.</doc>
-<status status="PASS" start="2024-05-28T14:30:50.414487" elapsed="0.227262"/>
+<status status="PASS" start="2024-05-28T17:57:58.947363" elapsed="0.164021"/>
 </kw>
-<status status="PASS" start="2024-05-28T14:30:50.411494" elapsed="0.231251"/>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2024-05-28T17:57:59.237580" level="INFO">Current page contains text 'Pix&amp;#10;Sem custo e cai na hora, mesmo de madrugada e fim de semana.'.</msg>
+<arg>Pix&amp;#10;Sem custo e cai na hora, mesmo de madrugada e fim de semana.</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="PASS" start="2024-05-28T17:57:59.111384" elapsed="0.127191"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="AppiumLibrary">
+<msg time="2024-05-28T17:57:59.392693" level="INFO">Element 'xpath=//android.view.View [@content-desc="Boleto
+Sem custo e pode levar 3 dias úteis para o dinheiro cair."]' is enabled .</msg>
+<msg time="2024-05-28T17:57:59.393693" level="INFO">xpath criteria: //android.view.View [@content-desc="Boleto
+Sem custo e pode levar 3 dias úteis para o dinheiro cair."]</msg>
+<arg>${DEPOSITO_BOLETO}</arg>
+<doc>Verifies that element identified with locator is enabled.</doc>
+<status status="PASS" start="2024-05-28T17:57:59.238575" elapsed="0.155118"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2024-05-28T17:57:59.501036" level="INFO">Current page contains text 'Boleto&amp;#10;Sem custo e pode levar 3 dias úteis para o dinheiro cair.'.</msg>
+<arg>Boleto&amp;#10;Sem custo e pode levar 3 dias úteis para o dinheiro cair.</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="PASS" start="2024-05-28T17:57:59.393693" elapsed="0.108340"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="AppiumLibrary">
+<msg time="2024-05-28T17:58:00.218297" level="INFO">Element 'xpath=//android.view.View[@content-desc="TED/DOC
+Pode ter custo e cai somente em horário comercial de dias úteis."]' is enabled .</msg>
+<msg time="2024-05-28T17:58:00.219294" level="INFO">xpath criteria: //android.view.View[@content-desc="TED/DOC
+Pode ter custo e cai somente em horário comercial de dias úteis."]</msg>
+<arg>${DEPOSITO_TED_DOC}</arg>
+<doc>Verifies that element identified with locator is enabled.</doc>
+<status status="PASS" start="2024-05-28T17:57:59.502033" elapsed="0.717261"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2024-05-28T17:58:00.333133" level="INFO">Current page contains text 'TED/DOC&amp;#10;Pode ter custo e cai somente em horário comercial de dias úteis.'.</msg>
+<arg>TED/DOC&amp;#10;Pode ter custo e cai somente em horário comercial de dias úteis.</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="PASS" start="2024-05-28T17:58:00.219294" elapsed="0.113839"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="AppiumLibrary">
+<msg time="2024-05-28T17:58:00.477846" level="INFO">Element 'xpath=//android.view.View[@content-desc="Trazer seu salário
+Receba todo mês direto aqui na sua conta, sem custo."]' is enabled .</msg>
+<msg time="2024-05-28T17:58:00.477846" level="INFO">xpath criteria: //android.view.View[@content-desc="Trazer seu salário
+Receba todo mês direto aqui na sua conta, sem custo."]</msg>
+<arg>${DEPOSITO_TRAZER_SALARIO}</arg>
+<doc>Verifies that element identified with locator is enabled.</doc>
+<status status="PASS" start="2024-05-28T17:58:00.334131" elapsed="0.143715"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2024-05-28T17:58:00.595984" level="INFO">Current page contains text 'Trazer seu salário&amp;#10;Receba todo mês direto aqui na sua conta, sem custo.'.</msg>
+<arg>Trazer seu salário&amp;#10;Receba todo mês direto aqui na sua conta, sem custo.</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="PASS" start="2024-05-28T17:58:00.477846" elapsed="0.119135"/>
+</kw>
+<status status="PASS" start="2024-05-28T17:57:58.618292" elapsed="1.978689"/>
 </kw>
 <kw name="Teardown" owner="config" type="TEARDOWN">
 <kw name="Run Keyword If Test Failed" owner="BuiltIn">
 <arg>Capture Page Screenshot</arg>
 <doc>Runs the given keyword with the given arguments, if the test failed.</doc>
-<status status="PASS" start="2024-05-28T14:30:50.645738" elapsed="0.000000"/>
+<status status="PASS" start="2024-05-28T17:58:00.599974" elapsed="0.001019"/>
 </kw>
 <kw name="Close All Applications" owner="AppiumLibrary">
 <doc>Closes all open applications.</doc>
-<status status="PASS" start="2024-05-28T14:30:50.647733" elapsed="0.388709"/>
+<status status="PASS" start="2024-05-28T17:58:00.600993" elapsed="0.360247"/>
 </kw>
-<status status="PASS" start="2024-05-28T14:30:50.644741" elapsed="0.392697"/>
+<status status="PASS" start="2024-05-28T17:58:00.598978" elapsed="0.363252"/>
 </kw>
-<status status="PASS" start="2024-05-28T14:30:41.339877" elapsed="9.698556"/>
+<status status="PASS" start="2024-05-28T17:57:48.048692" elapsed="12.916532"/>
 </test>
-<status status="PASS" start="2024-05-28T14:30:40.830605" elapsed="10.210473"/>
+<status status="PASS" start="2024-05-28T17:57:47.580377" elapsed="13.394818"/>
 </suite>
 <statistics>
 <total>

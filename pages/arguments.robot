@@ -7,6 +7,7 @@ Espera o elemento para clicar
     [Arguments]    ${elemento}
     Wait Until Element Is Visible    ${elemento}
     Click Element                    ${elemento}
+
 Espera o elemento para clicar e checa se está habilitado
     [Arguments]    ${elemento}
     Wait Until Element Is Visible    ${elemento}
@@ -24,6 +25,14 @@ Pega o atributo do elemento e verifica se tem o texto esperado
     Wait Until Page Contains Element    ${elemento}
     ${variavel}=    Get Element Attribute    ${elemento}    text
     Should Contain    ${variavel}    ${item}
+
+Pega o atributo do elemento e verifica se tem o texto esperado 2
+    [Arguments]    ${elemento}    ${frase}    ${atributo}
+    Wait Until Page Contains Element    ${elemento}
+    ${variavel}=    AppiumLibrary.Get Element Attribute    ${elemento}    ${atributo}
+    Should Contain    ${variavel}    ${frase}
+
+
 
 Checa se o elemento está presente na página
     [Arguments]    @{ELEMENTOS}

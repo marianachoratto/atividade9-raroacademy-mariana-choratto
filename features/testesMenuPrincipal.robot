@@ -138,13 +138,31 @@ T24- O usuário deve conseguir apertar o botão "Você tem 10 mil para emprésti
     Então posso usar os recursos da seção de empréstimos
 
 # TESTANDO AS SEÇÕES DO APP: CONTA, CARTÃO DE CRÉDITO, EMPRÉSTIMO, INVESTIMENTOS, SEGURO DE VIDA E DESCUBRA MAIS
-T25
+T25- O usuário deve conseguir interagir com a sessão de conta
+    Dado que acessei o aplicativo Nubank Clone
+    Quando clico no botão Conta
+    Então tenho acesso às informações da minha conta
 
+T26- O usuário deve ter acesso ao histórico de pagamentos da conta
+    Dado que acessei o aplicativo Nubank Clone
+    Quando clico no botão Conta
+    Então tenho acesso ao histórico de pagamento
 
-T25- O usuário deve conseguir interagir com a sessão cartão de crédito
+T27- O usuário deve poder interagir com os botões da página de conta
+    Dado que acessei o aplicativo Nubank Clone
+    Quando clico no botão Conta
+    E depois no botão depositar
+    Então posso usar os recursos da seção de depósito
+
+T27- O usuário deve conseguir interagir com a sessão cartão de crédito
     Dado que acessei o aplicativo Nubank Clone
     Quando clico na sessão cartão de crédito
     Então posso interargir com os recursos da sessão
+
+T28- O usuário deve poder ver informações sobre a fatura do cartão
+    Dado que acessei o aplicativo Nubank Clone
+    Quando clico na sessão cartão de crédito
+    Então posso ver informações sobre a fatura
 
 T26-O usuário deve conseguir interagir com a sessão Empréstimo
     Dado que acessei o aplicativo Nubank Clone
@@ -187,3 +205,8 @@ T32- O usuário deve poder clicar no botão de ajuda
     Dado que acessei o aplicativo Nubank Clone
     Quando clico no botão de ajuda
     Então ele estará habilitado
+
+T33- O usuário deve poder indicar amigos
+    Dado que acessei o aplicativo Nubank Clone
+    Quando clico no botão de indicar amigos
+    Então devo ser capaz de indicar um amigo
