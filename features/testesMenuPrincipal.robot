@@ -148,11 +148,36 @@ T26- O usuário deve ter acesso ao histórico de pagamentos da conta
     Quando clico no botão Conta
     Então tenho acesso ao histórico de pagamento
 
-T27- O usuário deve poder interagir com os botões da página de conta
+T27- O usuário deve poder interagir com o botão de depositar da conta
     Dado que acessei o aplicativo Nubank Clone
     Quando clico no botão Conta
     E depois no botão depositar
     Então posso usar os recursos da seção de depósito
+
+T28-O usuário deve poder interagir com o botão de pagar da página Conta
+    Dado que acessei o aplicativo Nubank Clone
+    Quando clico no botão Conta
+    E clico no botão pagar
+    Então consigo visualizar suas funcionalidades
+
+T29- O usuário deve poder interagir com o botão transferir na página Conta
+    Dado que acessei o aplicativo Nubank Clone
+    Quando clico no botão Conta
+    E clico no botão Transferir
+    Então consigo vizualizar a página
+    E fazer uma transferência
+
+T30- O usuário deve poder interagir com o botão Empréstimos na página Conta
+    Dado que acessei o aplicativo Nubank Clone
+    Quando clico no botão Conta
+    E clico no botão Empréstimos
+    Então posso usar os recursos da seção de empréstimos
+
+T31- O usuário deve poder interagir com o botão Cobrar da página Conta
+    Dado que acessei o aplicativo Nubank Clone
+    Quando clico no botão Conta
+    E clico no botão Cobrar
+    Então posso digitar o valor que eu espero cobrar
 
 T27- O usuário deve conseguir interagir com a sessão cartão de crédito
     Dado que acessei o aplicativo Nubank Clone

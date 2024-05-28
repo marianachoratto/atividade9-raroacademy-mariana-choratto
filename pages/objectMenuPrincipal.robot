@@ -40,9 +40,10 @@ ${HISTÓRICO_3}    xpath=//android.view.View[@content-desc="Transferência receb
 ${HISTÓRICO_4}    xpath=//android.view.View[@content-desc="Transferência recebida\nOntem\nIVAN COELHO \nR$ 30,00\nPix"]
     # Botões da conta
 ${BOTÃO_DEPOSITAR_CONTA}    xpath=//android.widget.HorizontalScrollView/android.widget.Button[1]
-${BOTÃO_PAGAR_BOLETOS_CONTA}    xpath=//android.widget.HorizontalScrollView/android.widget.Button[2]
+${BOTÃO_PAGAR_CONTA}    xpath=//android.widget.HorizontalScrollView/android.widget.Button[2]
 ${BOTÃO_TRANSFERIR_CONTA}    xpath=//android.widget.HorizontalScrollView/android.widget.Button[3]
 ${BOTÃO_EMPRESTIMO_CONTA}    xpath=//android.widget.HorizontalScrollView/android.widget.Button[4]
+${BOTÃO_COBRAR_CONTA}    xpath=//android.widget.HorizontalScrollView/android.widget.Button[4]
 
 
 # Página de empréstimo de 10 mil
@@ -119,6 +120,18 @@ Então tenho acesso ao histórico de pagamento
 E depois no botão depositar
     Espera o elemento para clicar    ${BOTÃO_DEPOSITAR_CONTA}
 
+E clico no botão pagar
+    Espera o elemento para clicar    ${BOTÃO_PAGAR_CONTA}
+
+E clico no botão Transferir
+    Espera o elemento para clicar    ${BOTÃO_TRANSFERIR_CONTA}
+
+E clico no botão Empréstimos
+    Espera o elemento para clicar    ${BOTÃO_EMPRESTIMO_CONTA}
+
+E clico no botão Cobrar
+    Swipe By Percent    80    55    20    55
+    Espera o elemento para clicar    ${BOTÃO_COBRAR_CONTA}
 
 Então consigo clicar no botão "Conquiste planos futuros"
     Espera o elemento para clicar e checa se está habilitado    ${BOTÃO_PLANOS_FUTUROS}
