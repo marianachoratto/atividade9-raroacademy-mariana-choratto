@@ -9,6 +9,7 @@ T1- Quando acessar o aplicativo o usuário deverá ter acesso à informações p
     Dado que acessei o aplicativo Nubank Clone
     Então tenho acesso à várias funcionalidades e informações pesssoais
 
+# TESTANDO CARROSSEL DE BOTÕES 
 T2- Usuário deve conseguir interagir a seção de pix
     Dado que acessei o aplicativo Nubank Clone
     Quando aperto o botão Pix 
@@ -121,6 +122,7 @@ T21- O usuário deve conseguir clicar no botão de Encontrar Atalhos
     Quando faço um swipe do carrossel de botões
     Então consigo clicar no botão criar atalhos
 
+# TESTANDO "BOTÕES MEUS CARTÕES" E OUTROS
 T22- O usuário deve conseguir clicar no botão Meus Cartões
     Dado que acessei o aplicativo Nubank Clone
     Quando clico no botão meus cartões
@@ -134,3 +136,54 @@ T24- O usuário deve conseguir apertar o botão "Você tem 10 mil para emprésti
     Dado que acessei o aplicativo Nubank Clone
     Quando clico no botão "Você tem 10 mil para empréstimos"
     Então posso usar os recursos da seção de empréstimos
+
+# TESTANDO AS SEÇÕES DO APP: CONTA, CARTÃO DE CRÉDITO, EMPRÉSTIMO, INVESTIMENTOS, SEGURO DE VIDA E DESCUBRA MAIS
+T25
+
+
+T25- O usuário deve conseguir interagir com a sessão cartão de crédito
+    Dado que acessei o aplicativo Nubank Clone
+    Quando clico na sessão cartão de crédito
+    Então posso interargir com os recursos da sessão
+
+T26-O usuário deve conseguir interagir com a sessão Empréstimo
+    Dado que acessei o aplicativo Nubank Clone
+    Quando clico na sessão empréstimo
+    Então posso usar os recursos da seção de empréstimos
+
+T26- O usuário deve conseguir interagir com a sessão Investimentos
+    Dado que acessei o aplicativo Nubank Clone
+    Quando clico na sessão Investimentos
+    Então tenho acesso às funcionalidades da seção de investimentos
+
+T27- O usuário deve conseguir interagir com a sessão Investimentos clicando no botão Conhecer
+    Dado que acessei o aplicativo Nubank Clone
+    Quando clico na sessão Investimentos usando o botão Conhecer
+    Então tenho acesso às funcionalidades da seção de investimentos
+
+T28- O usuário deve conseguir clicar na sessão Seguro de Vida
+    Dado que acessei o aplicativo Nubank Clone
+    Quando clico na sessão Seguro de Vida
+    Então o botão está habilitado
+
+T29- O usuário deve conseguir clicar no botão Quero Conhecer na sessão Descubra mais
+    Dado que acessei o aplicativo Nubank Clone
+    Quando clico no botão Quero conhecer
+    Então ele deve estar habilitado
+
+T30- O usuário deve conseguir clicar no botão Indicar Amigos na sessão Descubra mais
+    Dado que acessei o aplicativo Nubank Clone
+    Quando clico no botão Indicar amigos
+    Então devo ser capaz de indicar um amigo
+
+# TESTANDO OS 3 ÍCONES DO CANTO SUPERIOR DIREITO
+T31- O usuário deve poder fechar o a visualização do valor da conta clicando no ícone do olho
+    Dado que acessei o aplicativo Nubank Clone
+    Quando clícone no ícone de visualização
+    Então o valor do saldo da conta desaparece
+    E o valor da fatura do cartão de crédito também
+
+T32- O usuário deve poder clicar no botão de ajuda
+    Dado que acessei o aplicativo Nubank Clone
+    Quando clico no botão de ajuda
+    Então ele estará habilitado

@@ -19,9 +19,10 @@ ${BOTAO_ENCONTRAR_ATALHOS}    xpath=//android.widget.ScrollView/android.widget.H
 
 # Página PIX
 ${PAGINA_PIX}        xpath= //android.widget.ImageView[@content-desc="Minha área Pix\nTudo o que você precisa para pagar, transferir ou cobrar.\nPagar\nTransferir\nCobrar"]
-${BOTÃO_PAGAR}        xpath=${PREFIXO_2} /android.widget.Button[2]
-${BOTÃO_TRANSFERIR}    xpath=${PREFIXO_2} /android.widget.Button[3]
-${BOTÃO_COBRAR}        xpath=${PREFIXO_2} /android.widget.Button[4]
+# DIMINUIR ESSES XPATHS ------------------------
+${BOTÃO_PAGAR}        xpath=//android.widget.ImageView[@content-desc="Minha área Pix\nTudo o que você precisa para pagar, transferir ou cobrar.\nPagar\nTransferir\nCobrar"]/android.widget.Button[2]
+${BOTÃO_TRANSFERIR}    xpath=//android.widget.ImageView[@content-desc="Minha área Pix\nTudo o que você precisa para pagar, transferir ou cobrar.\nPagar\nTransferir\nCobrar"]/android.widget.Button[3]
+${BOTÃO_COBRAR}        xpath=//android.widget.ImageView[@content-desc="Minha área Pix\nTudo o que você precisa para pagar, transferir ou cobrar.\nPagar\nTransferir\nCobrar"]/android.widget.Button[4]
 ${MINHAS_CHAVES}        xpath=${PREFIXO} [@content-desc="Minhas chaves"]
 ${LIMITE_PIX}        xpath=${PREFIXO} [@content-desc="Meu limite Pix"]
 ${ME_AJUDA}        xpath=${PREFIXO} [@content-desc="Me ajuda"]
@@ -59,25 +60,17 @@ ${INPUT_COBRANCA}    xpath=//android.widget.EditText
 Quando aperto o botão Pix
     Espera o elemento para clicar    ${BOTAO_PIX}
 
+# TESTE DANDO ERRO
 Então tenho acesso às suas funcionalidades
     Wait Until Page Contains Element    ${PAGINA_PIX}
-    # Checa se o elemento está presente na página    ${BOTÃO_PAGAR}    ${BOTÃO_TRANSFERIR}
-    Element Should Be Enabled   ${BOTÃO_PAGAR}
-    Element Should Be Enabled   ${BOTÃO_TRANSFERIR}
-    Element Should Be Enabled   ${BOTÃO_COBRAR}
-    Element Should Be Enabled   ${MINHAS_CHAVES} 
-    Element Should Be Enabled   ${LIMITE_PIX} 
-    Element Should Be Enabled   ${ME_AJUDA}
+    Checa se o elemento está habilitado    ${BOTÃO_PAGAR}    ${BOTÃO_TRANSFERIR}    ${BOTÃO_COBRAR}    ${MINHAS_CHAVES}    ${LIMITE_PIX}    ${ME_AJUDA}
 
 Quando aperto o botão Pagar
     Espera o elemento para clicar    ${BOTÃO_PAGAR_BOLETOS}
 
 Então consigo visualizar suas funcionalidades
-    # Checa se o elemento está presente na página
     Wait Until Page Contains Element    ${PAGINA_PAGAR_BOLETOS}
-    Element Should Be Enabled    ${FUNC_PAGAR_COM_PIX}    
-    Element Should Be Enabled    ${FUNC_PAGAR_FATURA_CARTÕES}    
-    Element Should Be Enabled    ${FUNC_PAGAR_BOLETO}    
+    Checa se o elemento está habilitado    ${FUNC_PAGAR_COM_PIX}    ${FUNC_PAGAR_FATURA_CARTÕES}    ${FUNC_PAGAR_BOLETO}   
 
 Quando aperto o botão transferir
     Espera o elemento para clicar    ${BOTAO_TRANSFERIR}
@@ -101,9 +94,6 @@ Quando digito letras e números
     Espera o elemento para fazer o inputtext    ${INPUT_TRANSFERENCIA}    "abc78987"
 
 Então apenas os números aparecem
-    # Wait Until Page Contains    7,89
-    # ${texto}    Get Element Attribute    ${INPUT_TRANSFERENCIA}    text
-    # Should Contain    ${texto}    R$ 7,89
     Pega o atributo do elemento e verifica se tem o texto esperado    ${INPUT_TRANSFERENCIA}    R$ 7,89    
 
 Quando digito 14 numeros

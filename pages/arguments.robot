@@ -18,6 +18,7 @@ Espera o elemento para fazer o inputtext
     Wait Until Element Is Visible    ${elemento}
     Input Text                       ${elemento}    ${texto}
 
+# CHECAR SE ESSE ARGUMENTS ESTÁ FUNCIONANDO
 Pega o atributo do elemento e verifica se tem o texto esperado
     [Arguments]    ${elemento}    ${item}
     Wait Until Page Contains Element    ${elemento}
@@ -33,4 +34,9 @@ Checa se o elemento está visível
     [Arguments]    @{ELEMENTOS}
     FOR    ${elemento}    IN    @{ELEMENTOS}
         Element Should Be Visible    ${elemento}
+    END
+Checa se o elemento está habilitado
+    [Arguments]    @{ELEMENTOS}
+    FOR    ${elemento}    IN    @{ELEMENTOS}
+        Element Should Be Enabled    ${elemento}
     END
