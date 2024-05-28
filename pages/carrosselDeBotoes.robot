@@ -13,6 +13,9 @@ ${BOTAO_TRANSFERIR}    xpath=//android.widget.ScrollView/android.widget.Horizont
 ${BOTÃO_DEPOSITAR}    xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[4]
 ${BOTÃO_EMPRESTIMO}    xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[4]
 ${BOTÃO_RECARGA_CEL}    xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[2]
+${BOTÃO_COBRAR_CARROSSEL}    xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[3]
+${BOTÃO_DOAÇÃO}    xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[4]
+${BOTAO_ENCONTRAR_ATALHOS}    xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[5]
 
 # Página PIX
 ${PAGINA_PIX}        xpath= //android.widget.ImageView[@content-desc="Minha área Pix\nTudo o que você precisa para pagar, transferir ou cobrar.\nPagar\nTransferir\nCobrar"]
@@ -45,6 +48,12 @@ ${EMPRESTIMOS_TEXTO1}    xpath=//android.view.View[@content-desc="O valor dispon
 ${EMPRESTIMOS_TEXTO2}    xpath=//android.view.View[@content-desc="Este valor pode mudar diariamente devido à nossa análise de crédito."]
 ${EMPRESTIMOS_LINK}    xpath=//android.view.View[@content-desc="Entenda como funciona >"]
 ${BOTÃO_NOVO_EMPRESTIMO}    xpath=//android.widget.Button[@content-desc="NOVO EMPRÉSTIMO"]
+
+# Página recarga de celular
+${INPUT_CELULAR}    xpath=//android.widget.EditText
+
+# Página Cobrar
+${INPUT_COBRANCA}    xpath=//android.widget.EditText
 
 *** Keywords ***
 Quando aperto o botão Pix
@@ -86,10 +95,10 @@ Quando digito letras ao invés dos números
     
 Então as letras não aparecerão na tela
     ${texto}    Get Element Attribute    ${INPUT_TRANSFERENCIA}    text
-    Should Not Contain    ${texto}    R$ abcd
+    Should Not Contain    ${texto}    abcd
 
 Quando digito letras e números
-    Espera o elemento para fazer o inputtext    ${INPUT_TRANSFERENCIA}    "abc789"
+    Espera o elemento para fazer o inputtext    ${INPUT_TRANSFERENCIA}    "abc78987"
 
 Então apenas os números aparecem
     # Wait Until Page Contains    7,89
@@ -101,16 +110,12 @@ Quando digito 14 numeros
     Espera o elemento para fazer o inputtext    ${INPUT_TRANSFERENCIA}    "11122233344455"
 
 Então aparecem 14 números na tela do celular
-    # ${texto}    Get Element Attribute    ${INPUT_TRANSFERENCIA}    text
-    # Should Contain    ${texto}    R$ 111.222.333.444,55
     Pega o atributo do elemento e verifica se tem o texto esperado    ${INPUT_TRANSFERENCIA}    R$ 111.222.333.444,55    
 
 Quando digito mais que 14 numeros
     Espera o elemento para fazer o inputtext    ${INPUT_TRANSFERENCIA}    "111222333444555"
 
 Então à tela volta à 0
-    # ${texto}    Get Element Attribute    ${INPUT_TRANSFERENCIA}    text
-    # Should Contain    ${texto}    R$ 0,00
     Pega o atributo do elemento e verifica se tem o texto esperado    ${INPUT_TRANSFERENCIA}    R$ 0,00
 
 Quando aperto o botão depositar
@@ -134,13 +139,57 @@ Quando aperto o botão Empréstimos
 
 Então posso usar os recursos da seção de empréstimos
     Wait Until Page Contains Element    ${PAGINA_EMPRESTIMO}
-    Element Should Be Visible    ${EMPRESTIMOS_TEXTO1}
-    Element Should Be Visible    ${EMPRESTIMOS_TEXTO2}
-    Element Should Be Visible    ${BOTÃO_NOVO_EMPRESTIMO}
-    Element Should Be Visible    ${EMPRESTIMOS_LINK}
+    Checa se o elemento está visível    ${EMPRESTIMOS_TEXTO1}    ${EMPRESTIMOS_TEXTO2}    ${BOTÃO_NOVO_EMPRESTIMO}    ${EMPRESTIMOS_LINK}
 
 Quando aperto o botão Recarga de celular
-    Swipe By Percent    50    50    5    50
+    Swipe By Percent    90    50    15    50
     Espera o elemento para clicar    ${BOTÃO_RECARGA_CEL}        
 
 Então posso digitar o numero do meu celular para recarga
+    Page Should Contain Text    Qual número você quer recarregar?&#10;(DDD) + Número
+    Espera o elemento para fazer o inputtext    ${INPUT_CELULAR}    71988725533
+
+Então apenas os números do telefone aparecem
+    Pega o atributo do elemento e verifica se tem o texto esperado    ${INPUT_TRANSFERENCIA}    (78) 987
+
+Quando digito 11 números
+    Espera o elemento para fazer o inputtext    ${INPUT_TRANSFERENCIA}    "95756325874"
+
+Então aparecem 11 números na tela do celular
+    Pega o atributo do elemento e verifica se tem o texto esperado    ${INPUT_TRANSFERENCIA}    (95) 75632-5874
+
+Quando digito 12 números ou mais
+    Espera o elemento para fazer o inputtext    ${INPUT_TRANSFERENCIA}    "9575632587411111"
+
+Então só mostrará 11 números na tela do celular
+    Pega o atributo do elemento e verifica se tem o texto esperado    ${INPUT_TRANSFERENCIA}    (95) 75632-5874
+
+Quando aperto o botão Cobrar
+    Swipe By Percent    90    50    15    50
+    Espera o elemento para clicar    ${BOTÃO_COBRAR_CARROSSEL}
+
+Então posso digitar o valor que eu espero cobrar
+    Espera o elemento para fazer o inputtext    ${INPUT_COBRANCA}    38514
+    Page Should Contain Text    Qual valor você quer receber?
+
+Quando digito 14 números
+    Espera o elemento para fazer o inputtext    ${INPUT_COBRANCA}    "11122233344455"
+
+Então aparecem 14 números na tela de cobrança
+    Pega o atributo do elemento e verifica se tem o texto esperado    ${INPUT_COBRANCA}    R$ 111.222.333.444,55
+
+Quando digito 15 números
+    Espera o elemento para fazer o inputtext    ${INPUT_COBRANCA}    "111222333444556"
+
+Então o input volta a ficar em branco
+    Wait Until Element Is Visible    ${INPUT_COBRANCA}
+    Pega o atributo do elemento e verifica se tem o texto esperado    ${INPUT_COBRANCA}    R$ 0,00
+
+Quando faço um swipe do carrossel de botões
+    Swipe By Percent    90    50    15    50
+
+Então consigo clicar no botão
+    Espera o elemento para clicar e checa se está habilitado    ${BOTÃO_DOAÇÃO}    
+
+Então consigo clicar no botão criar atalhos
+    Espera o elemento para clicar e checa se está habilitado    ${BOTAO_ENCONTRAR_ATALHOS} 

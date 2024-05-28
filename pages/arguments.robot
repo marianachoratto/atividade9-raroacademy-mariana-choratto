@@ -7,6 +7,11 @@ Espera o elemento para clicar
     [Arguments]    ${elemento}
     Wait Until Element Is Visible    ${elemento}
     Click Element                    ${elemento}
+Espera o elemento para clicar e checa se está habilitado
+    [Arguments]    ${elemento}
+    Wait Until Element Is Visible    ${elemento}
+    Element Should Be Enabled    ${elemento}
+    Click Element                    ${elemento}
 
 Espera o elemento para fazer o inputtext
     [Arguments]    ${elemento}    ${texto}
@@ -19,13 +24,13 @@ Pega o atributo do elemento e verifica se tem o texto esperado
     ${variavel}=    Get Element Attribute    ${elemento}    text
     Should Contain    ${variavel}    ${item}
 
-# Checa se o elemento está presente na página
-#     [Arguments]    ${elemento1}    ${elemento2}=""    ${elemento3}=""    ${elemento4}=""    ${elemento5}=""
-
-#     @{ELEMENTOS}=    ${elemento1}    ${elemento2}    ${elemento3}    ${elemento4}    ${elemento5}
-
-#     FOR    ${elemento}    IN    @{ELEMENTOS}
-#         IF    "${elemento}" != $EMPTY
-#             Page Should Contain Element    ${elemento}
-#         END
-#     END
+Checa se o elemento está presente na página
+    [Arguments]    @{ELEMENTOS}
+    FOR    ${elemento}    IN    @{ELEMENTOS}
+        Page Should Contain Element    ${elemento}
+    END
+Checa se o elemento está visível
+    [Arguments]    @{ELEMENTOS}
+    FOR    ${elemento}    IN    @{ELEMENTOS}
+        Element Should Be Visible    ${elemento}
+    END

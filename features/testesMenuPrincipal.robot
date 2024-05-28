@@ -63,3 +63,74 @@ T11- O usuário deve conseguir interagir com a sessão de recarga de celular
     Dado que acessei o aplicativo Nubank Clone
     Quando aperto o botão Recarga de celular
     Então posso digitar o numero do meu celular para recarga
+
+T12- O usuário não deve conseguir digitar letras na tela de recarga
+    Dado que acessei o aplicativo Nubank Clone
+    Quando aperto o botão Recarga de celular
+    Quando digito letras ao invés dos números
+    Então as letras não aparecerão na tela
+
+T13- Quando o usuário digita letras e números apenas números aparecem na tela de recarga
+    Dado que acessei o aplicativo Nubank Clone
+    Quando aperto o botão Recarga de celular
+    Quando digito letras e números
+    Então apenas os números do telefone aparecem
+
+T14- O usuário pode digitar no máximo 11 números no input de recarga 
+    Dado que acessei o aplicativo Nubank Clone
+    Quando aperto o botão Recarga de celular
+    Quando digito 11 números
+    Então aparecem 11 números na tela do celular
+
+T15- O usuário não deve conseguir digitar 12 numeros ou mais no input de recarga
+    Dado que acessei o aplicativo Nubank Clone
+    Quando aperto o botão Recarga de celular
+    Quando digito 12 números ou mais
+    Então só mostrará 11 números na tela do celular
+
+T16- O usuário deve conseguir interagir com a sessão Cobrar
+    Dado que acessei o aplicativo Nubank Clone
+    Quando aperto o botão Cobrar
+    Então posso digitar o valor que eu espero cobrar
+
+T17- Quando o usuário digita letras e números apenas números aparecem na tela de cobrança
+    Dado que acessei o aplicativo Nubank Clone
+    Quando aperto o botão Cobrar
+    Quando digito letras ao invés dos números
+    Então as letras não aparecerão na tela
+
+T18- O usuário pode digitar no máximo 14 números no input de recarga
+    Dado que acessei o aplicativo Nubank Clone
+    Quando aperto o botão Cobrar
+    Quando digito 14 números
+    Então aparecem 14 números na tela de cobrança
+
+T19- O usuário não deve conseguir digitar 15 numeros ou mais no input de recarga
+    Dado que acessei o aplicativo Nubank Clone
+    Quando aperto o botão Cobrar
+    Quando digito 15 números
+    Então o input volta a ficar em branco
+
+T20- O usuário deve conseguir clicar no botão de Doação
+    Dado que acessei o aplicativo Nubank Clone
+    Quando faço um swipe do carrossel de botões
+    Então consigo clicar no botão
+
+T21- O usuário deve conseguir clicar no botão de Encontrar Atalhos
+    Dado que acessei o aplicativo Nubank Clone
+    Quando faço um swipe do carrossel de botões
+    Então consigo clicar no botão criar atalhos
+
+T22- O usuário deve conseguir clicar no botão Meus Cartões
+    Dado que acessei o aplicativo Nubank Clone
+    Quando clico no botão meus cartões
+    Então consigo ver que ele está ligado
+
+T23- O usuário deve conseguir clicar no botão "Conquiste planos futuros"
+    Dado que acessei o aplicativo Nubank Clone
+    Então consigo clicar no botão "Conquiste planos futuros"
+
+T24- O usuário deve conseguir apertar o botão "Você tem 10 mil para empréstimos"
+    Dado que acessei o aplicativo Nubank Clone
+    Quando clico no botão "Você tem 10 mil para empréstimos"
+    Então posso usar os recursos da seção de empréstimos
