@@ -4,25 +4,26 @@ Library    XML
 Resource    ../base.robot
 
 *** Variables ***
-${PREFIXO_2}    //android.widget.ImageView/
-
+${PREFIXO_2}    //android.widget.ImageView
+${PREFIXO_3}    //android.widget.ScrollView
+${PREFIXO_4}    //android.widget.HorizontalScrollView
 # Botões do carrossel
-${BOTAO_PIX}                   xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[1]
-${BOTÃO_PAGAR_BOLETOS}         xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[2]
-${BOTAO_TRANSFERIR}            xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[3]
-${BOTÃO_DEPOSITAR}             xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[4]
-${BOTÃO_EMPRESTIMO}            xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[4]
-${BOTÃO_RECARGA_CEL}           xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[2]
-${BOTÃO_COBRAR_CARROSSEL}      xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[3]
-${BOTÃO_DOAÇÃO}                xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[4]
-${BOTAO_ENCONTRAR_ATALHOS}     xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[5]
+${BOTAO_PIX}                   xpath=${PREFIXO_3}/android.widget.HorizontalScrollView[1]/android.widget.Button[1]
+${BOTÃO_PAGAR_BOLETOS}         xpath=${PREFIXO_3}/android.widget.HorizontalScrollView[1]/android.widget.Button[2]
+${BOTAO_TRANSFERIR}            xpath=${PREFIXO_3}/android.widget.HorizontalScrollView[1]/android.widget.Button[3]
+${BOTÃO_DEPOSITAR}             xpath=${PREFIXO_3}/android.widget.HorizontalScrollView[1]/android.widget.Button[4]
+${BOTÃO_EMPRESTIMO}            xpath=${PREFIXO_3}/android.widget.HorizontalScrollView[1]/android.widget.Button[4]
+${BOTÃO_RECARGA_CEL}           xpath=${PREFIXO_3}/android.widget.HorizontalScrollView[1]/android.widget.Button[2]
+${BOTÃO_COBRAR_CARROSSEL}      xpath=${PREFIXO_3}/android.widget.HorizontalScrollView[1]/android.widget.Button[3]
+${BOTÃO_DOAÇÃO}                xpath=${PREFIXO_3}/android.widget.HorizontalScrollView[1]/android.widget.Button[4]
+${BOTAO_ENCONTRAR_ATALHOS}     xpath=${PREFIXO_3}/android.widget.HorizontalScrollView[1]/android.widget.Button[5]
 
 # Página PIX
-${PAGINA_PIX}                  xpath= //android.widget.ImageView[@content-desc="Minha área Pix\nTudo o que você precisa para pagar, transferir ou cobrar.\nPagar\nTransferir\nCobrar"]
+${PAGINA_PIX}                  xpath= ${PREFIXO_2} [@content-desc="Minha área Pix\nTudo o que você precisa para pagar, transferir ou cobrar.\nPagar\nTransferir\nCobrar"]
 # DIMINUIR ESSES XPATHS ------------------------
-${BOTÃO_PAGAR}                 xpath=//android.widget.ImageView[@content-desc="Minha área Pix\nTudo o que você precisa para pagar, transferir ou cobrar.\nPagar\nTransferir\nCobrar"]/android.widget.Button[2]
-${BOTÃO_TRANSFERIR}            xpath=//android.widget.ImageView[@content-desc="Minha área Pix\nTudo o que você precisa para pagar, transferir ou cobrar.\nPagar\nTransferir\nCobrar"]/android.widget.Button[3]
-${BOTÃO_COBRAR}                xpath=//android.widget.ImageView[@content-desc="Minha área Pix\nTudo o que você precisa para pagar, transferir ou cobrar.\nPagar\nTransferir\nCobrar"]/android.widget.Button[4]
+${BOTÃO_PAGAR}                 xpath=${PREFIXO_2} [@content-desc="Minha área Pix\nTudo o que você precisa para pagar, transferir ou cobrar.\nPagar\nTransferir\nCobrar"]/android.widget.Button[2]
+${BOTÃO_TRANSFERIR}            xpath=${PREFIXO_2} [@content-desc="Minha área Pix\nTudo o que você precisa para pagar, transferir ou cobrar.\nPagar\nTransferir\nCobrar"]/android.widget.Button[3]
+${BOTÃO_COBRAR}                xpath=${PREFIXO_2} [@content-desc="Minha área Pix\nTudo o que você precisa para pagar, transferir ou cobrar.\nPagar\nTransferir\nCobrar"]/android.widget.Button[4]
 ${MINHAS_CHAVES}               xpath=${PREFIXO} [@content-desc="Minhas chaves"]
 ${LIMITE_PIX}                  xpath=${PREFIXO} [@content-desc="Meu limite Pix"]
 ${ME_AJUDA}                    xpath=${PREFIXO} [@content-desc="Me ajuda"]
@@ -40,14 +41,14 @@ ${INPUT_TRANSFERENCIA}          xpath=//android.widget.EditText
 ${PAGINA_DEPOSITO}              xpath=${PREFIXO} [@content-desc="Como você quer depositar na sua conta do Nubank"]
 ${DEPOSITO_PIX}                 xpath=${PREFIXO} [@content-desc="Pix\nSem custo e cai na hora, mesmo de madrugada e fim de semana."]
 ${DEPOSITO_BOLETO}              xpath=${PREFIXO} [@content-desc="Boleto\nSem custo e pode levar 3 dias úteis para o dinheiro cair."]
-${DEPOSITO_TED_DOC}             xpath=//android.view.View[@content-desc="TED/DOC\nPode ter custo e cai somente em horário comercial de dias úteis."]
-${DEPOSITO_TRAZER_SALARIO}      xpath=//android.view.View[@content-desc="Trazer seu salário\nReceba todo mês direto aqui na sua conta, sem custo."]
+${DEPOSITO_TED_DOC}             xpath=${PREFIXO} [@content-desc="TED/DOC\nPode ter custo e cai somente em horário comercial de dias úteis."]
+${DEPOSITO_TRAZER_SALARIO}      xpath=${PREFIXO} [@content-desc="Trazer seu salário\nReceba todo mês direto aqui na sua conta, sem custo."]
 
 # Página empréstimo
 ${PAGINA_EMPRESTIMO}            xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[2]
-${EMPRESTIMOS_TEXTO1}           xpath=//android.view.View[@content-desc="O valor disponível no momento é de R$ 10.000,00"]
-${EMPRESTIMOS_TEXTO2}           xpath=//android.view.View[@content-desc="Este valor pode mudar diariamente devido à nossa análise de crédito."]
-${EMPRESTIMOS_LINK}             xpath=//android.view.View[@content-desc="Entenda como funciona >"]
+${EMPRESTIMOS_TEXTO1}           xpath=${PREFIXO} [@content-desc="O valor disponível no momento é de R$ 10.000,00"]
+${EMPRESTIMOS_TEXTO2}           xpath=${PREFIXO} [@content-desc="Este valor pode mudar diariamente devido à nossa análise de crédito."]
+${EMPRESTIMOS_LINK}             xpath=${PREFIXO} [@content-desc="Entenda como funciona >"]
 ${BOTÃO_NOVO_EMPRESTIMO}        xpath=//android.widget.Button[@content-desc="NOVO EMPRÉSTIMO"]
 
 # Página recarga de celular
@@ -76,7 +77,7 @@ Quando aperto o botão transferir
 
 Então consigo vizualizar a página
     Wait Until Page Contains Element    ${INPUT_TRANSFERENCIA} 
-    ${hint}=    Get Element Attribute    ${INPUT_TRANSFERENCIA}    hint
+    ${hint}=    AppiumLibrary.Get Element Attribute    ${INPUT_TRANSFERENCIA}    hint
     Should Contain    ${hint}    Qual é o valor da transferência?\nSaldo disponível em conta R$ 181,79    
 
 E fazer uma transferência
@@ -86,26 +87,26 @@ Quando digito letras ao invés de números
     Espera o elemento para fazer o inputtext    ${INPUT_TRANSFERENCIA}    "abcd"
     
 Então as letras não aparecerão na tela
-    ${texto}    Get Element Attribute    ${INPUT_TRANSFERENCIA}    text
+    ${texto}    AppiumLibrary.Get Element Attribute    ${INPUT_TRANSFERENCIA}    text
     Should Not Contain    ${texto}    abcd
 
 Quando digito letras e números
     Espera o elemento para fazer o inputtext    ${INPUT_TRANSFERENCIA}    "abc78987"
 
 Então apenas os números aparecem
-    Pega o atributo do elemento e verifica se tem o texto esperado    ${INPUT_TRANSFERENCIA}    789,87    
+    Pega o atributo do elemento e verifica se tem o texto esperado    ${INPUT_TRANSFERENCIA}    789,87    text    
 
 Quando digito 14 numeros
     Espera o elemento para fazer o inputtext    ${INPUT_TRANSFERENCIA}    "11122233344455"
 
 Então aparecem 14 números na tela do celular
-    Pega o atributo do elemento e verifica se tem o texto esperado    ${INPUT_TRANSFERENCIA}    R$ 111.222.333.444,55    
+    Pega o atributo do elemento e verifica se tem o texto esperado    ${INPUT_TRANSFERENCIA}    R$ 111.222.333.444,55    text   
 
 Quando digito mais que 14 numeros
     Espera o elemento para fazer o inputtext    ${INPUT_TRANSFERENCIA}    "111222333444555"
 
 Então à tela volta à 0
-    Pega o atributo do elemento e verifica se tem o texto esperado    ${INPUT_TRANSFERENCIA}    R$ 0,00
+    Pega o atributo do elemento e verifica se tem o texto esperado    ${INPUT_TRANSFERENCIA}    R$ 0,00    text
 
 Quando aperto o botão Depositar
     Espera o elemento para clicar    ${BOTÃO_DEPOSITAR}
@@ -113,14 +114,11 @@ Quando aperto o botão Depositar
 
 Então posso usar os recursos da seção de depósito
    Wait Until Element Is Visible    ${DEPOSITO_PIX}
+   Checa se o elemento está habilitado    ${DEPOSITO_PIX}    ${DEPOSITO_PIX}    ${DEPOSITO_TED_DOC}    
    Page Should Contain Text    Como você quer depositar na sua conta do Nubank
-   Element Should Be Enabled    ${DEPOSITO_PIX}
    Page Should Contain Text    Pix&#10;Sem custo e cai na hora, mesmo de madrugada e fim de semana.
-   Element Should Be Enabled    ${DEPOSITO_BOLETO}
    Page Should Contain Text    Boleto&#10;Sem custo e pode levar 3 dias úteis para o dinheiro cair.
-   Element Should Be Enabled    ${DEPOSITO_TED_DOC}
    Page Should Contain Text    TED/DOC&#10;Pode ter custo e cai somente em horário comercial de dias úteis.
-   Element Should Be Enabled    ${DEPOSITO_TRAZER_SALARIO}
    Page Should Contain Text    Trazer seu salário&#10;Receba todo mês direto aqui na sua conta, sem custo.
 
 Quando aperto o botão Empréstimos
@@ -140,19 +138,19 @@ Então posso digitar o numero do meu celular para recarga
     Espera o elemento para fazer o inputtext    ${INPUT_CELULAR}    71988725533
 
 Então apenas os números aparecem na tela do telefone
-    Pega o atributo do elemento e verifica se tem o texto esperado    ${INPUT_TRANSFERENCIA}    (78) 987
+    Pega o atributo do elemento e verifica se tem o texto esperado    ${INPUT_TRANSFERENCIA}    (78) 987    text
 
 Quando digito 11 números
     Espera o elemento para fazer o inputtext    ${INPUT_TRANSFERENCIA}    "95756325874"
 
 Então aparecem 11 números na tela do celular
-    Pega o atributo do elemento e verifica se tem o texto esperado    ${INPUT_TRANSFERENCIA}    (95) 75632-5874
+    Pega o atributo do elemento e verifica se tem o texto esperado    ${INPUT_TRANSFERENCIA}    (95) 75632-5874    text
 
 Quando digito 12 números ou mais
     Espera o elemento para fazer o inputtext    ${INPUT_TRANSFERENCIA}    "9575632587411111"
 
 Então a tela de celular só mostrará 11 números
-    Pega o atributo do elemento e verifica se tem o texto esperado    ${INPUT_TRANSFERENCIA}    (95) 75632-5874
+    Pega o atributo do elemento e verifica se tem o texto esperado    ${INPUT_TRANSFERENCIA}    (95) 75632-5874    text
 
 Quando aperto o botão Cobrar
     Swipe By Percent    90    50    15    50
@@ -166,14 +164,14 @@ Quando digito 14 números
     Espera o elemento para fazer o inputtext    ${INPUT_COBRANCA}    "11122233344455"
 
 Então aparecem 14 números na tela de cobrança
-    Pega o atributo do elemento e verifica se tem o texto esperado    ${INPUT_COBRANCA}    R$ 111.222.333.444,55
+    Pega o atributo do elemento e verifica se tem o texto esperado    ${INPUT_COBRANCA}    R$ 111.222.333.444,55    text
 
 Quando digito 15 números
     Espera o elemento para fazer o inputtext    ${INPUT_COBRANCA}    "111222333444556"
 
 Então o input fica em branco
     Wait Until Element Is Visible    ${INPUT_COBRANCA}
-    Pega o atributo do elemento e verifica se tem o texto esperado    ${INPUT_COBRANCA}    R$ 0,00
+    Pega o atributo do elemento e verifica se tem o texto esperado    ${INPUT_COBRANCA}    R$ 0,00    text
 
 Quando mexo no carrossel de botões
     Swipe By Percent    90    50    15    50

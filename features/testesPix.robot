@@ -5,7 +5,7 @@ Test Setup        Abrir App
 Test Teardown     Teardown    
 
 *** Test Cases ***
-T2- Usuário deve conseguir interagir a seção de pix
+T30- Usuário deve conseguir interagir a seção de pix
     Dado que acessei o aplicativo Nubank Clone
     Quando aperto o botão Pix 
     Então tenho acesso às suas funcionalidades
