@@ -2,8 +2,6 @@
 Library    AppiumLibrary
 Resource    ../base.robot
 
-# TIRAR TODOS OS PAGES SHOULD CONTAIN TEXT
-
 *** Variables ***
 ${PREFIXO}    //android.view.View
 
