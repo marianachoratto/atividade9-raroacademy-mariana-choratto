@@ -6,6 +6,6 @@ Library    AppiumLibrary
 Resource   utils/config.robot
 
 # Pages
-Resource    pages/objectMenuPrincipal.robot
-Resource    pages/arguments.robot
-Resource    pages/carrosselDeBotoes.robot
+Resource    pages/menuPrincipalPage.robot
+Resource    pages/commons.robot
+Resource    pages/carrosselDeBotoesPage.robot
