@@ -6,79 +6,78 @@ Resource    ../base.robot
 
 *** Variables ***
 ${PREFIXO}    //android.view.View
-${COMPATIBILIDADE_ANDROID}    xpath=//android.widget.Button[@resource-id="android:id/button1"]
-${SAUDACAO_USUARIO}    xpath=${PREFIXO} [@content-desc="Olá, Breno Freitas"]
-${ÍCONE_OLHO}    xpath=//android.widget.ScrollView/android.widget.Button[1]
-${ÍCONE_AJUDA}    xpath=//android.widget.ScrollView/android.widget.Button[2]
-${ÍCONE_INDICAR_AMIGOS}    xpath=//android.widget.ScrollView/android.widget.Button[3]
+${COMPATIBILIDADE_ANDROID}        xpath=//android.widget.Button[@resource-id="android:id/button1"]
+${SAUDACAO_USUARIO}               xpath=${PREFIXO} [@content-desc="Olá, Breno Freitas"]
+${ÍCONE_OLHO}                     xpath=//android.widget.ScrollView/android.widget.Button[1]
+${ÍCONE_AJUDA}                    xpath=//android.widget.ScrollView/android.widget.Button[2]
+${ÍCONE_INDICAR_AMIGOS}           xpath=//android.widget.ScrollView/android.widget.Button[3]
 
 
-${CARROSSEL_BOTOES}    xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]
-${SALDO_CONTA}    xpath=${PREFIXO} [contains(@content-desc, 'Conta')]
-${BOTAO_MEUS_CARTOES}    xpath=${PREFIXO} [@content-desc="Meus cartões"]
+${CARROSSEL_BOTOES}               xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]
+${SALDO_CONTA}                    xpath=${PREFIXO} [contains(@content-desc, 'Conta')]
 
-${CARTAO_CREDITO}    xpath=${PREFIXO} [contains(@content-desc,"Fatura atual")]
-${EMPRESTIMOS}    xpath=${PREFIXO} [@content-desc="Empréstimo\nValor disponível de até\nR$ 10.000,00"]
-${INVESTIMENTOS}    xpath= ${PREFIXO} [contains(@content-desc,"Investimentos")]
-${SEGURO_DE_VIDA}    xpath= ${PREFIXO} [contains(@content-desc,"Seguro de vida")]
-${DESCUBRA_MAIS}    xpath= ${PREFIXO} [@content-desc="Descubra mais"]
+${CARTAO_CREDITO}                 xpath=${PREFIXO} [contains(@content-desc,"Fatura atual")]
+${EMPRESTIMOS}                    xpath=${PREFIXO} [@content-desc="Empréstimo\nValor disponível de até\nR$ 10.000,00"]
+${INVESTIMENTOS}                  xpath= ${PREFIXO} [contains(@content-desc,"Investimentos")]
+${SEGURO_DE_VIDA}                 xpath= ${PREFIXO} [contains(@content-desc,"Seguro de vida")]
+${DESCUBRA_MAIS}                  xpath= ${PREFIXO} [@content-desc="Descubra mais"]
 
-${BOTÃO_MEUS CARTÕES}    xpath=//android.view.View[@content-desc="Meus cartões"]
-${BOTÃO_EMPRESTIMO_10_MIL}    xpath=//android.view.View[@content-desc="Você tem R$ 10.000,00 disponíveis para empréstimo."]
-${BOTÃO_PLANOS_FUTUROS}    xpath=//android.view.View[@content-desc="Conquiste planos futuros: conheça as opções para guardar dinheiro."]
+${BOTÃO_MEUS CARTÕES}             xpath=//android.view.View[@content-desc="Meus cartões"]
+${BOTÃO_EMPRESTIMO_10_MIL}        xpath=//android.view.View[@content-desc="Você tem R$ 10.000,00 disponíveis para empréstimo."]
+${BOTÃO_PLANOS_FUTUROS}           xpath=//android.view.View[@content-desc="Conquiste planos futuros: conheça as opções para guardar dinheiro."]
 
 # Página Conta
-${PAGINA_CONTA}    xpath=//android.widget.ScrollView
-${SALDO_DISPONÍVEL}    xpath=//android.view.View[@content-desc="Saldo disponível"]
-${SALDO_DISPONÍVEL_181}    xpath=//android.view.View[@content-desc="R$ 181,79"]
-${DINHEIRO_GAURDADO}    xpath=//android.view.View[@content-desc="Dinheiro guardado\nR$ 240,02"]
-${RENDIMENTO_CONTA}    xpath=//android.view.View[@content-desc="Rendimento total da conta\n+R$ 0,20 este mês"]
+${PAGINA_CONTA}                   xpath=//android.widget.ScrollView
+${SALDO_DISPONÍVEL}               xpath=//android.view.View[@content-desc="Saldo disponível"]
+${SALDO_DISPONÍVEL_181}           xpath=//android.view.View[@content-desc="R$ 181,79"]
+${DINHEIRO_GAURDADO}              xpath=//android.view.View[@content-desc="Dinheiro guardado\nR$ 240,02"]
+${RENDIMENTO_CONTA}               xpath=//android.view.View[@content-desc="Rendimento total da conta\n+R$ 0,20 este mês"]
     # Histórico da conta
-${HISTÓRICO_1}    xpath=//android.view.View[@content-desc="Transferência enviada\nOntem\nPATRICIA COSTA \nR$ 30,00\nPix"]
-${HISTÓRICO_2}    xpath=//android.view.View[@content-desc="Transferência recebida\nOntem\nANDRE JEY\nR$ 30,00\nPix"]
-${HISTÓRICO_3}    xpath=//android.view.View[@content-desc="Transferência recebida\nOntem\nERIKO BARBOSA\nR$ 30,00\nPix"]
-${HISTÓRICO_4}    xpath=//android.view.View[@content-desc="Transferência recebida\nOntem\nIVAN COELHO \nR$ 30,00\nPix"]
+${HISTÓRICO_1}                    xpath=//android.view.View[@content-desc="Transferência enviada\nOntem\nPATRICIA COSTA \nR$ 30,00\nPix"]
+${HISTÓRICO_2}                    xpath=//android.view.View[@content-desc="Transferência recebida\nOntem\nANDRE JEY\nR$ 30,00\nPix"]
+${HISTÓRICO_3}                    xpath=//android.view.View[@content-desc="Transferência recebida\nOntem\nERIKO BARBOSA\nR$ 30,00\nPix"]
+${HISTÓRICO_4}                    xpath=//android.view.View[@content-desc="Transferência recebida\nOntem\nIVAN COELHO \nR$ 30,00\nPix"]
     # Botões da conta
-${BOTÃO_DEPOSITAR_CONTA}    xpath=//android.widget.HorizontalScrollView/android.widget.Button[1]
-${BOTÃO_PAGAR_CONTA}    xpath=//android.widget.HorizontalScrollView/android.widget.Button[2]
-${BOTÃO_TRANSFERIR_CONTA}    xpath=//android.widget.HorizontalScrollView/android.widget.Button[3]
-${BOTÃO_EMPRESTIMO_CONTA}    xpath=//android.widget.HorizontalScrollView/android.widget.Button[4]
-${BOTÃO_COBRAR_CONTA}    xpath=//android.widget.HorizontalScrollView/android.widget.Button[4]
+${BOTÃO_DEPOSITAR_CONTA}          xpath=//android.widget.HorizontalScrollView/android.widget.Button[1]
+${BOTÃO_PAGAR_CONTA}              xpath=//android.widget.HorizontalScrollView/android.widget.Button[2]
+${BOTÃO_TRANSFERIR_CONTA}         xpath=//android.widget.HorizontalScrollView/android.widget.Button[3]
+${BOTÃO_EMPRESTIMO_CONTA}         xpath=//android.widget.HorizontalScrollView/android.widget.Button[4]
+${BOTÃO_COBRAR_CONTA}             xpath=//android.widget.HorizontalScrollView/android.widget.Button[4]
 
 
 # Página de empréstimo de 10 mil
-${PAGINA_EMPRESTIMO}    //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[2]
-${LINK_ENTENDA_COMO_FUNCIONA}    xpath=//android.view.View[@content-desc="Entenda como funciona >"]
-${BOTÃO_NOVO_EMPRÉSTIMO}    xpath=//android.widget.Button[@content-desc="NOVO EMPRÉSTIMO"]
+${PAGINA_EMPRESTIMO}              xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[2]
+${LINK_ENTENDA_COMO_FUNCIONA}     xpath=//android.view.View[@content-desc="Entenda como funciona >"]
+${BOTÃO_NOVO_EMPRÉSTIMO}          xpath=//android.widget.Button[@content-desc="NOVO EMPRÉSTIMO"]
 
 # Página de cartão de crédito
-${PAGINA_CARTÃO_CRÉDITO}    xpath=//android.widget.ScrollView
-${BOTÃO_PAGAR_FATURA}    xpath=//android.view.View[@content-desc="Pagar fatura"]
-${BOTÃO_RESUMO_FATURAS}    xpath=//android.view.View[@content-desc="Resumo de faturas"]
-${BOTÃO_AJUSTAR_LIMITES}    xpath=//android.view.View[@content-desc="Ajustar limites"]
-${BOTÃO_CARTÃO_VIRTUAL}    xpath=//android.view.View[@content-desc="Cartão virtual"]
-${BOTÃO_BLOQUEAR_CARTÃO}    xpath=//android.view.View[@content-desc="Bloquear cartão"]
-${BOTÃO_AMIGOS_CRÉDITO}    xpath=//android.view.View[@content-desc="Indicar amigos"]
+${PAGINA_CARTÃO_CRÉDITO}          xpath=//android.widget.ScrollView
+${BOTÃO_PAGAR_FATURA}             xpath=//android.view.View[@content-desc="Pagar fatura"]
+${BOTÃO_RESUMO_FATURAS}           xpath=//android.view.View[@content-desc="Resumo de faturas"]
+${BOTÃO_AJUSTAR_LIMITES}          xpath=//android.view.View[@content-desc="Ajustar limites"]
+${BOTÃO_CARTÃO_VIRTUAL}           xpath=//android.view.View[@content-desc="Cartão virtual"]
+${BOTÃO_BLOQUEAR_CARTÃO}          xpath=//android.view.View[@content-desc="Bloquear cartão"]
+${BOTÃO_AMIGOS_CRÉDITO}           xpath=//android.view.View[@content-desc="Indicar amigos"]
     # Faturas cartão de crédito
-${FATURA_1}    xpath=//android.view.View[@content-desc="Pagamento recebido\nOntem\nVOCÊ PAGOU R$ 50,00\nR$ 30,00\nPix"]
-${FATURA_2}    xpath=//android.view.View[@content-desc="Supermercado\nOntem\nBRENO FREITAS\nR$ 30,00\nPix"]
-${FATURA_3}    xpath=//android.view.View[@content-desc="Transferência enviada\nOntem\nBRENO FREITAS\nR$ 30,00\nPix"]
+${FATURA_1}                       xpath=//android.view.View[@content-desc="Pagamento recebido\nOntem\nVOCÊ PAGOU R$ 50,00\nR$ 30,00\nPix"]
+${FATURA_2}                       xpath=//android.view.View[@content-desc="Supermercado\nOntem\nBRENO FREITAS\nR$ 30,00\nPix"]
+${FATURA_3}                       xpath=//android.view.View[@content-desc="Transferência enviada\nOntem\nBRENO FREITAS\nR$ 30,00\nPix"]
 
 # Página de Investimentos
-${PÁGINA_INVESTIMENTOS}    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View
-${INVESTIMENTO_SEM_TAXAS}    xpath=//android.view.View[@content-desc="Invista sem taxas e burocracia!"]
-${INVESTIMENTO_TEXTO_1}    xpath=//android.view.View[@content-desc="Estamos convidando alguns clientes do Nubank para serem os primeiros a fazer parte desta revolução roxa nos investimentos, e você é um deles!"]
-${INVESTIMENTO_TEXTO_2}    xpath=//android.view.View[@content-desc="Além de não pagar nada para abrir a conta, você terá taxa zero na corretagem de ações!"]
-${BOTÃO_INVESTIMENTOS_CONHECER}    xpath=//android.view.View[@content-desc="Conhecer"]
+${PÁGINA_INVESTIMENTOS}           xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View
+${INVESTIMENTO_SEM_TAXAS}         xpath=//android.view.View[@content-desc="Invista sem taxas e burocracia!"]
+${INVESTIMENTO_TEXTO_1}           xpath=//android.view.View[@content-desc="Estamos convidando alguns clientes do Nubank para serem os primeiros a fazer parte desta revolução roxa nos investimentos, e você é um deles!"]
+${INVESTIMENTO_TEXTO_2}           xpath=//android.view.View[@content-desc="Além de não pagar nada para abrir a conta, você terá taxa zero na corretagem de ações!"]
+${BOTÃO_INVESTIMENTOS_CONHECER}   xpath=//android.view.View[@content-desc="Conhecer"]
 
 # Sessão descubra mais
-${BOTÃO_QUERO_CONHECER}    xpath=//android.view.View[@content-desc="Quero conhecer"]
-${BOTÃO_INDICAR_AMIGOS}    xpath=//android.view.View[@content-desc="Indicar amigos"]
+${BOTÃO_QUERO_CONHECER}           xpath=//android.view.View[@content-desc="Quero conhecer"]
+${BOTÃO_INDICAR_AMIGOS}           xpath=//android.view.View[@content-desc="Indicar amigos"]
 
 # Tela indicar amigos
-${TELA_INDICAR_AMIGOS}        xpath=//android.widget.ImageView[@content-desc="Resgate seus amigos da fila do banco\nPara cada indicação aceita, um amigo salvo da burocracia"]
+${TELA_INDICAR_AMIGOS}            xpath=//android.widget.ImageView[@content-desc="Resgate seus amigos da fila do banco\nPara cada indicação aceita, um amigo salvo da burocracia"]
 ${BOTÃO_INDICAR_AMIGOS_DENTRO}    xpath=//android.widget.Button[@content-desc="INDICAR AMIGOS"]
-${TEXTO_INDICAR_AMIGOS}    xpath=//android.widget.ImageView[@content-desc="Resgate seus amigos da fila do banco\nPara cada indicação aceita, um amigo salvo da burocracia"]
+${TEXTO_INDICAR_AMIGOS}           xpath=//android.widget.ImageView[@content-desc="Resgate seus amigos da fila do banco\nPara cada indicação aceita, um amigo salvo da burocracia"]
 
 *** Keywords ***
 Apertar botão de incompatibilidade de versões Android
@@ -151,16 +150,12 @@ Então posso interargir com os recursos da sessão
     Swipe By Percent    90    85    10    85
     Checa se o elemento está presente na página    ${BOTÃO_BLOQUEAR_CARTÃO}    ${BOTÃO_AMIGOS_CRÉDITO}    
 
-
 Então posso ver informações sobre a fatura
     Swipe By Percent    50    75    50    3
     Wait Until Element Is Visible    ${FATURA_1}
     Pega o atributo do elemento e verifica se tem o texto esperado 2    ${FATURA_1}   Pagamento recebido\nOntem\nVOCÊ PAGOU R$ 50,00\nR$ 30,00\nPix     content-desc
     Pega o atributo do elemento e verifica se tem o texto esperado 2    ${FATURA_2}    Supermercado\nOntem\nBRENO FREITAS\nR$ 30,00\nPix    content-desc
     Pega o atributo do elemento e verifica se tem o texto esperado 2    ${FATURA_3}    Transferência enviada\nOntem\nBRENO FREITAS\nR$ 30,00\nPix    content-desc
-
-
-
 
 Quando clico na sessão empréstimo
     Swipe By Percent    50    75    50    3

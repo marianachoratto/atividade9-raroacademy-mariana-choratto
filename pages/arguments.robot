@@ -19,12 +19,12 @@ Espera o elemento para fazer o inputtext
     Wait Until Element Is Visible    ${elemento}
     Input Text                       ${elemento}    ${texto}
 
-# CHECAR SE ESSE ARGUMENTS ESTÁ FUNCIONANDO
-Pega o atributo do elemento e verifica se tem o texto esperado
-    [Arguments]    ${elemento}    ${item}
-    Wait Until Page Contains Element    ${elemento}
-    ${variavel}=    Get Element Attribute    ${elemento}    text
-    Should Contain    ${variavel}    ${item}
+# # CHECAR SE ESSE ARGUMENTS ESTÁ FUNCIONANDO
+# Pega o atributo do elemento e verifica se tem o texto esperado
+#     [Arguments]    ${elemento}    ${item}
+#     Wait Until Page Contains Element    ${elemento}
+#     ${variavel}=    Get Element Attribute    ${elemento}    text
+#     Should Contain    ${variavel}    ${item}
 
 Pega o atributo do elemento e verifica se tem o texto esperado 2
     [Arguments]    ${elemento}    ${frase}    ${atributo}
@@ -33,17 +33,18 @@ Pega o atributo do elemento e verifica se tem o texto esperado 2
     Should Contain    ${variavel}    ${frase}
 
 
-
 Checa se o elemento está presente na página
     [Arguments]    @{ELEMENTOS}
     FOR    ${elemento}    IN    @{ELEMENTOS}
         Page Should Contain Element    ${elemento}
     END
+
 Checa se o elemento está visível
     [Arguments]    @{ELEMENTOS}
     FOR    ${elemento}    IN    @{ELEMENTOS}
         Element Should Be Visible    ${elemento}
     END
+
 Checa se o elemento está habilitado
     [Arguments]    @{ELEMENTOS}
     FOR    ${elemento}    IN    @{ELEMENTOS}

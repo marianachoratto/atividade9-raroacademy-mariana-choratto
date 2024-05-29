@@ -7,60 +7,59 @@ Resource    ../base.robot
 ${PREFIXO_2}    //android.widget.ImageView/
 
 # Botões do carrossel
-${BOTAO_PIX}        xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[1]
-${BOTÃO_PAGAR_BOLETOS}    xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[2]
-${BOTAO_TRANSFERIR}    xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[3]
-${BOTÃO_DEPOSITAR}    xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[4]
-${BOTÃO_EMPRESTIMO}    xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[4]
-${BOTÃO_RECARGA_CEL}    xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[2]
-${BOTÃO_COBRAR_CARROSSEL}    xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[3]
-${BOTÃO_DOAÇÃO}    xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[4]
-${BOTAO_ENCONTRAR_ATALHOS}    xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[5]
+${BOTAO_PIX}                   xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[1]
+${BOTÃO_PAGAR_BOLETOS}         xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[2]
+${BOTAO_TRANSFERIR}            xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[3]
+${BOTÃO_DEPOSITAR}             xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[4]
+${BOTÃO_EMPRESTIMO}            xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[4]
+${BOTÃO_RECARGA_CEL}           xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[2]
+${BOTÃO_COBRAR_CARROSSEL}      xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[3]
+${BOTÃO_DOAÇÃO}                xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[4]
+${BOTAO_ENCONTRAR_ATALHOS}     xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[5]
 
 # Página PIX
-${PAGINA_PIX}        xpath= //android.widget.ImageView[@content-desc="Minha área Pix\nTudo o que você precisa para pagar, transferir ou cobrar.\nPagar\nTransferir\nCobrar"]
+${PAGINA_PIX}                  xpath= //android.widget.ImageView[@content-desc="Minha área Pix\nTudo o que você precisa para pagar, transferir ou cobrar.\nPagar\nTransferir\nCobrar"]
 # DIMINUIR ESSES XPATHS ------------------------
-${BOTÃO_PAGAR}        xpath=//android.widget.ImageView[@content-desc="Minha área Pix\nTudo o que você precisa para pagar, transferir ou cobrar.\nPagar\nTransferir\nCobrar"]/android.widget.Button[2]
-${BOTÃO_TRANSFERIR}    xpath=//android.widget.ImageView[@content-desc="Minha área Pix\nTudo o que você precisa para pagar, transferir ou cobrar.\nPagar\nTransferir\nCobrar"]/android.widget.Button[3]
-${BOTÃO_COBRAR}        xpath=//android.widget.ImageView[@content-desc="Minha área Pix\nTudo o que você precisa para pagar, transferir ou cobrar.\nPagar\nTransferir\nCobrar"]/android.widget.Button[4]
-${MINHAS_CHAVES}        xpath=${PREFIXO} [@content-desc="Minhas chaves"]
-${LIMITE_PIX}        xpath=${PREFIXO} [@content-desc="Meu limite Pix"]
-${ME_AJUDA}        xpath=${PREFIXO} [@content-desc="Me ajuda"]
+${BOTÃO_PAGAR}                 xpath=//android.widget.ImageView[@content-desc="Minha área Pix\nTudo o que você precisa para pagar, transferir ou cobrar.\nPagar\nTransferir\nCobrar"]/android.widget.Button[2]
+${BOTÃO_TRANSFERIR}            xpath=//android.widget.ImageView[@content-desc="Minha área Pix\nTudo o que você precisa para pagar, transferir ou cobrar.\nPagar\nTransferir\nCobrar"]/android.widget.Button[3]
+${BOTÃO_COBRAR}                xpath=//android.widget.ImageView[@content-desc="Minha área Pix\nTudo o que você precisa para pagar, transferir ou cobrar.\nPagar\nTransferir\nCobrar"]/android.widget.Button[4]
+${MINHAS_CHAVES}               xpath=${PREFIXO} [@content-desc="Minhas chaves"]
+${LIMITE_PIX}                  xpath=${PREFIXO} [@content-desc="Meu limite Pix"]
+${ME_AJUDA}                    xpath=${PREFIXO} [@content-desc="Me ajuda"]
 
 # Página pagar boletos
-${PAGINA_PAGAR_BOLETOS}    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View
-${FUNC_PAGAR_COM_PIX}    xpath=${PREFIXO} [@content-desc="Pagar com Pix\nLeia um QR Code ou cole o código."]
+${PAGINA_PAGAR_BOLETOS}         xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View
+${FUNC_PAGAR_COM_PIX}           xpath=${PREFIXO} [@content-desc="Pagar com Pix\nLeia um QR Code ou cole o código."]
 ${FUNC_PAGAR_FATURA_CARTÕES}    xpath=${PREFIXO} [@content-desc="Pagar fatura do cartão\nLibera o limite do seu Cartão de Crédito."]
-${FUNC_PAGAR_BOLETO}    xpath=${PREFIXO} [@content-desc="Pagar um boleto\nContas de luz, água, etc."]
+${FUNC_PAGAR_BOLETO}            xpath=${PREFIXO} [@content-desc="Pagar um boleto\nContas de luz, água, etc."]
 
 # Página de Transferência
-${INPUT_TRANSFERENCIA}    xpath=//android.widget.EditText
+${INPUT_TRANSFERENCIA}          xpath=//android.widget.EditText
 
 # Página Depósito
-${PAGINA_DEPOSITO}    xpath=${PREFIXO} [@content-desc="Como você quer depositar na sua conta do Nubank"]
-${DEPOSITO_PIX}    xpath=${PREFIXO} [@content-desc="Pix\nSem custo e cai na hora, mesmo de madrugada e fim de semana."]
-${DEPOSITO_BOLETO}    xpath=${PREFIXO} [@content-desc="Boleto\nSem custo e pode levar 3 dias úteis para o dinheiro cair."]
-${DEPOSITO_TED_DOC}    xpath=//android.view.View[@content-desc="TED/DOC\nPode ter custo e cai somente em horário comercial de dias úteis."]
-${DEPOSITO_TRAZER_SALARIO}    xpath=//android.view.View[@content-desc="Trazer seu salário\nReceba todo mês direto aqui na sua conta, sem custo."]
+${PAGINA_DEPOSITO}              xpath=${PREFIXO} [@content-desc="Como você quer depositar na sua conta do Nubank"]
+${DEPOSITO_PIX}                 xpath=${PREFIXO} [@content-desc="Pix\nSem custo e cai na hora, mesmo de madrugada e fim de semana."]
+${DEPOSITO_BOLETO}              xpath=${PREFIXO} [@content-desc="Boleto\nSem custo e pode levar 3 dias úteis para o dinheiro cair."]
+${DEPOSITO_TED_DOC}             xpath=//android.view.View[@content-desc="TED/DOC\nPode ter custo e cai somente em horário comercial de dias úteis."]
+${DEPOSITO_TRAZER_SALARIO}      xpath=//android.view.View[@content-desc="Trazer seu salário\nReceba todo mês direto aqui na sua conta, sem custo."]
 
 # Página empréstimo
-${PAGINA_EMPRESTIMO}    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[2]
-${EMPRESTIMOS_TEXTO1}    xpath=//android.view.View[@content-desc="O valor disponível no momento é de R$ 10.000,00"]
-${EMPRESTIMOS_TEXTO2}    xpath=//android.view.View[@content-desc="Este valor pode mudar diariamente devido à nossa análise de crédito."]
-${EMPRESTIMOS_LINK}    xpath=//android.view.View[@content-desc="Entenda como funciona >"]
-${BOTÃO_NOVO_EMPRESTIMO}    xpath=//android.widget.Button[@content-desc="NOVO EMPRÉSTIMO"]
+${PAGINA_EMPRESTIMO}            xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[2]
+${EMPRESTIMOS_TEXTO1}           xpath=//android.view.View[@content-desc="O valor disponível no momento é de R$ 10.000,00"]
+${EMPRESTIMOS_TEXTO2}           xpath=//android.view.View[@content-desc="Este valor pode mudar diariamente devido à nossa análise de crédito."]
+${EMPRESTIMOS_LINK}             xpath=//android.view.View[@content-desc="Entenda como funciona >"]
+${BOTÃO_NOVO_EMPRESTIMO}        xpath=//android.widget.Button[@content-desc="NOVO EMPRÉSTIMO"]
 
 # Página recarga de celular
-${INPUT_CELULAR}    xpath=//android.widget.EditText
+${INPUT_CELULAR}                xpath=//android.widget.EditText
 
 # Página Cobrar
-${INPUT_COBRANCA}    xpath=//android.widget.EditText
+${INPUT_COBRANCA}               xpath=//android.widget.EditText
 
 *** Keywords ***
 Quando aperto o botão Pix
     Espera o elemento para clicar    ${BOTAO_PIX}
 
-# TESTE DANDO ERRO
 Então tenho acesso às suas funcionalidades
     Wait Until Page Contains Element    ${PAGINA_PIX}
     Checa se o elemento está habilitado    ${BOTÃO_PAGAR}    ${BOTÃO_TRANSFERIR}    ${BOTÃO_COBRAR}    ${MINHAS_CHAVES}    ${LIMITE_PIX}    ${ME_AJUDA}
