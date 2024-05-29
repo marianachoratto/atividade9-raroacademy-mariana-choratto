@@ -94,7 +94,7 @@ Quando digito letras e números
     Espera o elemento para fazer o inputtext    ${INPUT_TRANSFERENCIA}    "abc78987"
 
 Então apenas os números aparecem
-    Pega o atributo do elemento e verifica se tem o texto esperado    ${INPUT_TRANSFERENCIA}    R$ 7,89    
+    Pega o atributo do elemento e verifica se tem o texto esperado    ${INPUT_TRANSFERENCIA}    789,87    
 
 Quando digito 14 numeros
     Espera o elemento para fazer o inputtext    ${INPUT_TRANSFERENCIA}    "11122233344455"
@@ -108,7 +108,7 @@ Quando digito mais que 14 numeros
 Então à tela volta à 0
     Pega o atributo do elemento e verifica se tem o texto esperado    ${INPUT_TRANSFERENCIA}    R$ 0,00
 
-Quando aperto o botão depositar
+Quando aperto o botão Depositar
     Espera o elemento para clicar    ${BOTÃO_DEPOSITAR}
 
 
@@ -159,7 +159,7 @@ Quando aperto o botão Cobrar
     Swipe By Percent    90    50    15    50
     Espera o elemento para clicar    ${BOTÃO_COBRAR_CARROSSEL}
 
-Então posso digitar o valor que eu espero cobrar
+Então posso digitar o valor que eu espero receber
     Espera o elemento para fazer o inputtext    ${INPUT_COBRANCA}    38514
     Page Should Contain Text    Qual valor você quer receber?
 
@@ -172,7 +172,7 @@ Então aparecem 14 números na tela de cobrança
 Quando digito 15 números
     Espera o elemento para fazer o inputtext    ${INPUT_COBRANCA}    "111222333444556"
 
-Então o input volta a ficar em branco
+Então o input fica em branco
     Wait Until Element Is Visible    ${INPUT_COBRANCA}
     Pega o atributo do elemento e verifica se tem o texto esperado    ${INPUT_COBRANCA}    R$ 0,00
 

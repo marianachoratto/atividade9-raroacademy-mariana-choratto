@@ -117,7 +117,7 @@ Então tenho acesso ao histórico de pagamento
     Pega o atributo do elemento e verifica se tem o texto esperado 2    ${HISTÓRICO_3}    Transferência recebida\nOntem\nERIKO BARBOSA\nR$ 30,00\nPix    content-desc
     Pega o atributo do elemento e verifica se tem o texto esperado 2    ${HISTÓRICO_4}    Transferência recebida\nOntem\nIVAN COELHO \nR$ 30,00\nPix    content-desc
 
-E depois no botão depositar
+E depois no botão Depositar
     Espera o elemento para clicar    ${BOTÃO_DEPOSITAR_CONTA}
 
 E clico no botão pagar
@@ -139,7 +139,7 @@ Então consigo clicar no botão "Conquiste planos futuros"
 Quando clico no botão "Você tem 10 mil para empréstimos"
     Espera o elemento para clicar e checa se está habilitado    ${BOTÃO_EMPRESTIMO_10_MIL}     
 
-Quando clico na sessão cartão de crédito
+Quando clico na sessão Cartão de Crédito
     Espera o elemento para clicar    ${CARTAO_CREDITO}    
 
 Então posso interargir com os recursos da sessão
