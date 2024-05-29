@@ -14,7 +14,7 @@ T4- O Usuario deve conseguir interagir com a seção de transferir
 T5- O usuário não deve conseguir passar letras dentro do input de transferir
     Dado que acessei o aplicativo Nubank Clone
     Quando aperto o botão transferir
-    Quando digito letras ao invés dos números
+    Quando digito letras ao invés de números
     Então as letras não aparecerão na tela
 
 T6- Quando o usuário digita letras e números apenas números aparecem na tela de transferência

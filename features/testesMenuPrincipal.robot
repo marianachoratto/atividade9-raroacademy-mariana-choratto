@@ -12,21 +12,15 @@ T1- Quando acessar o aplicativo o usuário deverá ter acesso à informações p
 T22- O usuário deve conseguir clicar no botão Meus Cartões
     Dado que acessei o aplicativo Nubank Clone
     Quando clico no botão meus cartões
-    Então consigo ver que ele está ligado
+    Então consigo ver que ele está habilitado
 
 T23- O usuário deve conseguir clicar no botão "Conquiste planos futuros"
     Dado que acessei o aplicativo Nubank Clone
     Então consigo clicar no botão "Conquiste planos futuros"
 
-T24- O usuário deve conseguir apertar o botão "Você tem 10 mil para empréstimos"
+T40- O usuário deve poder fechar o a visualização dos valores da conta clicando no ícone de olho
     Dado que acessei o aplicativo Nubank Clone
-    Quando clico no botão "Você tem 10 mil para empréstimos"
-    Então posso usar os recursos da seção de empréstimos
-
-
-T40- O usuário deve poder fechar o a visualização do valor da conta clicando no ícone do olho
-    Dado que acessei o aplicativo Nubank Clone
-    Quando clícone no ícone de visualização
+    Quando clíco no ícone de visualização
     Então o valor do saldo da conta desaparece
     E o valor da fatura do cartão de crédito também
 

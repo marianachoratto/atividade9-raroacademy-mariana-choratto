@@ -83,7 +83,7 @@ Então consigo vizualizar a página
 E fazer uma transferência
     Espera o elemento para fazer o inputtext    ${INPUT_TRANSFERENCIA}    "15,00"
 
-Quando digito letras ao invés dos números
+Quando digito letras ao invés de números
     Espera o elemento para fazer o inputtext    ${INPUT_TRANSFERENCIA}    "abcd"
     
 Então as letras não aparecerão na tela
@@ -140,7 +140,7 @@ Então posso digitar o numero do meu celular para recarga
     Page Should Contain Text    Qual número você quer recarregar?&#10;(DDD) + Número
     Espera o elemento para fazer o inputtext    ${INPUT_CELULAR}    71988725533
 
-Então apenas os números do telefone aparecem
+Então apenas os números aparecem na tela do telefone
     Pega o atributo do elemento e verifica se tem o texto esperado    ${INPUT_TRANSFERENCIA}    (78) 987
 
 Quando digito 11 números
@@ -152,7 +152,7 @@ Então aparecem 11 números na tela do celular
 Quando digito 12 números ou mais
     Espera o elemento para fazer o inputtext    ${INPUT_TRANSFERENCIA}    "9575632587411111"
 
-Então só mostrará 11 números na tela do celular
+Então a tela de celular só mostrará 11 números
     Pega o atributo do elemento e verifica se tem o texto esperado    ${INPUT_TRANSFERENCIA}    (95) 75632-5874
 
 Quando aperto o botão Cobrar
@@ -176,11 +176,11 @@ Então o input fica em branco
     Wait Until Element Is Visible    ${INPUT_COBRANCA}
     Pega o atributo do elemento e verifica se tem o texto esperado    ${INPUT_COBRANCA}    R$ 0,00
 
-Quando faço um swipe do carrossel de botões
+Quando mexo no carrossel de botões
     Swipe By Percent    90    50    15    50
 
-Então consigo clicar no botão
+Então consigo clicar no botão de Doação
     Espera o elemento para clicar e checa se está habilitado    ${BOTÃO_DOAÇÃO}    
 
-Então consigo clicar no botão criar atalhos
+Então consigo clicar no botão Encontrar Atalhos
     Espera o elemento para clicar e checa se está habilitado    ${BOTAO_ENCONTRAR_ATALHOS} 

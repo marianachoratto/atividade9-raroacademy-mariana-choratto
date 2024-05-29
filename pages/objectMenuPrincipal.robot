@@ -98,7 +98,7 @@ Então tenho acesso à várias funcionalidades e informações pesssoais
 Quando clico no botão meus cartões
     Espera o elemento para clicar    ${BOTÃO_MEUS CARTÕES}
 
-Então consigo ver que ele está ligado
+Então consigo ver que ele está habilitado
     Element Should Be Enabled    ${BOTÃO_MEUS CARTÕES}
 
 Quando clico no botão Conta
@@ -189,7 +189,7 @@ Quando clico no botão Quero conhecer
     Swipe By Percent    50    75    50    3
     Espera o elemento para clicar    ${BOTÃO_QUERO_CONHECER}
 
-Então ele deve estar habilitado
+Então ele deverá estar habilitado
     Element Should Be Enabled    ${BOTÃO_QUERO_CONHECER}
 
 Quando clico no botão Indicar amigos
@@ -202,7 +202,7 @@ Então devo ser capaz de indicar um amigo
     Element Should Be Visible    ${TEXTO_INDICAR_AMIGOS}
     Element Should Be Visible    ${BOTÃO_INDICAR_AMIGOS_DENTRO}
 
-Quando clícone no ícone de visualização
+Quando clíco no ícone de visualização
     Espera o elemento para clicar    ${ÍCONE_OLHO}
 
 Então o valor do saldo da conta desaparece

@@ -13,7 +13,7 @@ T16- O usuário deve conseguir interagir com o botão Cobrar
 T17- Quando o usuário digita letras e números apenas números aparecem na tela de cobrança
     Dado que acessei o aplicativo Nubank Clone
     Quando aperto o botão Cobrar
-    Quando digito letras ao invés dos números
+    Quando digito letras ao invés de números
     Então as letras não aparecerão na tela
 
 T18- O usuário pode digitar no máximo 14 números no input de cobrança

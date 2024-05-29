@@ -8,7 +8,7 @@ Test Teardown     Teardown
 T38- O usuário deve conseguir clicar no botão Quero Conhecer na sessão Descubra mais
     Dado que acessei o aplicativo Nubank Clone
     Quando clico no botão Quero conhecer
-    Então ele deve estar habilitado
+    Então ele deverá estar habilitado
 
 T39- O usuário deve conseguir clicar no botão Indicar Amigos na sessão Descubra mais
     Dado que acessei o aplicativo Nubank Clone

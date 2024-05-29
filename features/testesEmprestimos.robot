@@ -20,3 +20,8 @@ T34-O usuário deve conseguir interagir com a sessão Empréstimo na página ini
     Dado que acessei o aplicativo Nubank Clone
     Quando clico na sessão empréstimo
     Então posso usar os recursos da seção de empréstimos
+
+T24- O usuário deve conseguir apertar o botão "Você tem 10 mil para empréstimos"
+    Dado que acessei o aplicativo Nubank Clone
+    Quando clico no botão "Você tem 10 mil para empréstimos"
+    Então posso usar os recursos da seção de empréstimos
